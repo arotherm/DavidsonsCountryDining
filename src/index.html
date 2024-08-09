@@ -1,6 +1,6 @@
 ---
-title: 'Pixel Perfect Websites | Code Stitch Web Designs | Denver, CO'
-description: 'Meta description for the page'
+title: "Davidson's Restaurant | Davidson's Country Dining | Innisfil, ON"
+description: 'Local Restaurant in Innisfil'
 preloadImg: '/assets/images/landing.jpg'
 permalink: '/'
 tags: 'sitemap' # Sitemap will use all pages in content/, due to content.json. As index.html is not included in content/ we need to manually add the sitemap tag to this page (only).
@@ -14,7 +14,7 @@ eleventyNavigation:
 {% block head %}
     <link rel="stylesheet" href="/assets/css/local.css"/>
     <link rel="stylesheet" href="/assets/css/critical.css"/>
-
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
     <!-- Script for Netlify Identity -->
     <script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     <script defer>
@@ -35,34 +35,284 @@ eleventyNavigation:
 {% endblock %}
 
 {% block body %}
-<!-- ============================================ -->
-<!--                    Hero                      -->
-<!-- ============================================ -->
+    <!-- ============================================ -->
+    <!--                    Hero                      -->
+    <!-- ============================================ -->
 
-<section id="hero-998">
-    <div class="cs-container">
-        <div class="cs-content">
-            <span class="cs-topper">Welcome to</span>
-            <!--Logo-->
-            <picture class="cs-logo">
-                <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Hero/food-logo.svg">
-                <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Hero/food-logo.svg">
-                <img decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Hero/food-logo.svg" alt="Stitch House Restaurant" width="614" height="166">
-            </picture>
-            <p class="cs-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.
-            </p>
-            <a href="" class="cs-button-solid">Reserve Your Table</a>
+    <section id="hero-998">
+        <div class="cs-container">
+            <div class="cs-content">
+                <span class="cs-topper">Welcome to</span>
+                <!--Logo-->
+                <picture class="cs-logo">
+                    <source media="(max-width: 600px)" srcset="assets/images/LogoT.svg">
+                    <source media="(min-width: 601px)"  srcset="assets/images/LogoT.svg">
+                    <img decoding="async" src="assets/images/LogoT.svg" alt="Davidsons Country Dining" >
+                </picture>
+                <p class="cs-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.
+                </p>
+                <a href="" class="cs-button-solid">Reserve Your Table</a>
+            </div>
         </div>
-    </div>
-    <!--Background Image-->
-    <!--Image is also set as background image in CSS at 1400px for parallax effect-->
-    <picture class="cs-background">
-        <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Hero/table-m.jpg">
-        <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Hero/table.jpg">
-        <img decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Hero/table.jpg" alt="logo" width="1920" height="1000">
-    </picture>
-</section>
+        <!--Background Image-->
+        <!--Image is also set as background image in CSS at 1400px for parallax effect-->
+        <picture class="cs-background">
+            <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Hero/table-m.jpg">
+            <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Hero/table.jpg">
+            <img decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Hero/table.jpg" alt="logo" width="1920" height="1000">
+        </picture>
+    </section>
+    <!-- ============================================ -->
+    <!--                    Menu                      -->
+    <!-- ============================================ -->
 
-{% include 'components/cta.html' %}
+    <section id="menu-1001">
+        <div class="cs-container">
+            <div class="cs-content">
+                <picture class="cs-wrapper" aria-hidden="true">
+                    <img class="cs-decal" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Food-Menu/decal1.svg" decoding="async" alt="decal" width="181" height="36">
+                </picture>
+                <h2 class="cs-title">Our Specials</h2>
+                <p class="cs-text">
+                    Ask your server about our specials.
+                    At Dan Davidson's, we take pride in our thoughtfully curated menu, where each ingredient is chosen for its freshness and quality. No matter what you choose, each dish at Davidson's promises a delightful and satisfying culinary experience.
+                </p>
+            </div>
+            <ul class="cs-card-group">
+                <li class="cs-item">
+                    <!--                <picture class="cs-picture"  aria-hidden="true">-->
+                    <!--                    <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Food-Menu/food3.jpg">-->
+                    <!--                    <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Food-Menu/food3.jpg">-->
+                    <!--                    <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Food-Menu/food3.jpg" alt="food" width="160" height="160">-->
+                    <!--                </picture>-->
+                    <div class="cs-info">
+                        <h3 class="cs-h3">
+                            <span class="cs-name">Soup of the Day</span>
+                            <span class="cs-price">
+                                8
+                            </span>
+                        </h3>
+                        <p class="cs-item-p">
+                            House-made made fresh soup, done differently depending on the week or month. Ask us what it is when you come!
+                        </p>
+                        //paragraph on soup
+
+                    </div>
+                </li>
+                <li class="cs-item">
+    <!--                <picture class="cs-picture"  aria-hidden="true">-->
+    <!--                    <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Food-Menu/food3.jpg">-->
+    <!--                    <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Food-Menu/food3.jpg">-->
+    <!--                    <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Food-Menu/food3.jpg" alt="food" width="160" height="160">-->
+    <!--                </picture>-->
+                    <div class="cs-info">
+                        <h3 class="cs-h3">
+                            <span class="cs-name">Caeser</span>
+                            <span class="cs-price">
+                                11
+                            </span>
+                        </h3>
+                        <p class="cs-item-p">
+                            House-made Greek vinaigrette over romaine, tomato, cucumber, peppers, red onion, feta, and black olives.
+                        </p>
+                    </div>
+                </li>
+                <li class="cs-item">
+    <!--                <picture class="cs-picture"  aria-hidden="true">-->
+    <!--                    <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Food-Menu/food2.jpg">-->
+    <!--                    <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Food-Menu/food2.jpg">-->
+    <!--                    <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Food-Menu/food2.jpg" alt="food" width="160" height="160">-->
+    <!--                </picture>-->
+                    <div class="cs-info">
+                        <h3 class="cs-h3">
+                            <span class="cs-name">Escargot</span>
+                            <span class="cs-price">
+                                16
+                            </span>
+                        </h3>
+                        <p class="cs-item-p">
+                            Sautéed with fresh garlic, Pernod, and butter, topped with freshly grated mozzarella cheese, parsley and broiled to a golden brown perfection.
+                        </p>
+                    </div>
+                </li>
+
+                <li class="cs-item">
+    <!--                <picture class="cs-picture"  aria-hidden="true">-->
+    <!--                    <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Food-Menu/food2.jpg">-->
+    <!--                    <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Food-Menu/food2.jpg">-->
+    <!--                    <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Food-Menu/food2.jpg" alt="food" width="160" height="160">-->
+    <!--                </picture>-->
+                    <div class="cs-info">
+                        <h3 class="cs-h3">
+                            <span class="cs-name">Roasted Prime Rib Dinner</span>
+                            <span class="cs-price">
+                                40
+                            </span>
+                        </h3>
+                        <p class="cs-item-p">
+                            Our famous slow and low-roasted prime rib is served with seasonal vegetables topped with our country gravy and your choice of potato.
+                        </p>
+                    </div>
+                </li>
+            </ul>
+            <a href="" class="cs-button-solid">See Our Menu</a>
+        </div>
+        <!--Static background is in CSS as a tiled pattern-->
+    </section>
+
+    <!-- ============================================ -->
+    <!--                 Side By Side                 -->
+    <!-- ============================================ -->
+
+    <section id="sbs-1456">
+        <div class="cs-container">
+            <!-- Left Image Section -->
+            <div class="cs-image-group">
+                <picture class="cs-picture cs-picture1">
+                    <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Landscapes/turbine1.jpg">
+                    <source media="(min-width: 601px)" srcset="assets/images/Building/building1.jpeg">
+                    <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Landscapes/turbine1.jpg" alt="turbine" width="500" height="729" aria-hidden="true">
+                </picture>
+                <picture class="cs-picture cs-picture2">
+                    <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Landscapes/windmill.jpg">
+                    <source media="(min-width: 601px)" srcset="assets/images/Building/building2.jpeg">
+                    <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Landscapes/windmill.jpg" alt="windmill" width="378" height="460" aria-hidden="true">
+                </picture>
+            </div>
+            <!-- Right Content Section-->
+            <div class="cs-content">
+                <span class="cs-topper">A Memorable Dining Experience</span>
+                <h2 class="cs-title">Innisfil’s Hidden Gem</h2>
+                <p class="cs-text">
+                    At Davidson's, we are dedicated to crafting memorable dining experiences with our thoughtfully curated menu. Each dish is made with the freshest local ingredients, blending tradition with creative flair. Whether you’re enjoying a cozy meal in our rustic setting or indulging in our gourmet specials, every bite promises satisfaction and delight.
+                </p>
+                <ul class="cs-card-group">
+                    <li class="cs-li">
+                        <picture class="cs-li-picture">
+                            <img class="cs-li-icon" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/volunteer1.svg" decoding="async" alt="icon" width="32" height="32" loading="lazy">
+                        </picture>
+                        <div class="cs-flex">
+                            <h3 class="cs-h3">Fresh, Local, and made with Love!</h3>
+                            <p class="cs-li-text">
+                                Our menu is thoughtfully curated to bring you the freshest local ingredients, blending tradition with creative flair.
+                            </p>
+                        </div>
+                    </li>
+                    <li class="cs-li">
+                        <picture class="cs-li-picture">
+                            <img class="cs-li-icon" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/volunteer2.svg" decoding="async" alt="icon" width="32" height="32" loading="lazy">
+                        </picture>
+                        <div class="cs-flex">
+                            <h3 class="cs-h3">Gourmet Ingredients</h3>
+                            <p class="cs-li-text">
+                                We pick only the best ingredients for our menu. From juicy prime rib to flavorful herbs, each part of our dishes is chosen carefully. This means every meal looks great and tastes even better.
+                            </p>
+                        </div>
+                    </li>
+                    <li class="cs-li">
+                        <picture class="cs-li-picture">
+                            <img class="cs-li-icon" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/volunteer3.svg" decoding="async" alt="icon" width="32" height="32" loading="lazy">
+                        </picture>
+                        <div class="cs-flex">
+                            <h3 class="cs-h3">Good Wine, Good Company</h3>
+                            <p class="cs-li-text">
+                                A good meal is best enjoyed with a nice glass of wine and friends. At Dan Davidson’s, we offer a selection of fine wines to match our dishes. Our cozy setting is perfect for making memories with loved ones.
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+                <a href="" class="cs-button-solid">Discover More</a>
+            </div>
+        </div>
+    <!--    <picture class="cs-background">-->
+    <!--        &lt;!&ndash;Mobile Image&ndash;&gt;-->
+    <!--        <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Landscapes/turbine2.png">-->
+    <!--        &lt;!&ndash;Tablet and above Image&ndash;&gt;-->
+    <!--        <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Landscapes/turbine2.png">-->
+    <!--        <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Landscapes/turbine2.png" alt="turbine" width="1280" height="568">-->
+    <!--    </picture>-->
+    </section>
+
+    <!-- ============================================ -->
+    <!--                  Gallery                     -->
+    <!-- ============================================ -->
+
+    <section id="gallery-1234">
+        <div class="cs-container">
+            <div class="cs-content">
+                <span class="cs-topper">Our Gallery</span>
+                <h2 class="cs-title">Let’s See Our Latest Project</h2>
+                <p class="cs-text">
+                    In the new era of technology we look in the future with certainty and for any post types, or just they are so much great of all to a program.
+                </p>
+            </div>
+            <div class="cs-gallery">
+                <div class="cs-flex">
+                    <picture class="cs-picture cs-picture1">
+                        <!--Mobile Image-->
+                        <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/man-sitting.jpg">
+                        <!--Tablet and above Image-->
+                        <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/man-sitting.jpg">
+                        <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/man-sitting.jpg" alt="person" width="360" height="420">
+                    </picture>
+                    <picture class="cs-picture cs-picture2">
+                        <!--Mobile Image-->
+                        <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/man-sitting.jpg">
+                        <!--Tablet and above Image-->
+                        <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/man-sitting.jpg">
+                        <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/man-sitting.jpg" alt="person" width="360" height="240">
+                    </picture>
+                </div>
+                <picture class="cs-picture cs-row">
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/man-sitting.jpg">
+                    <!--Tablet and above Image-->
+                    <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/man-sitting.jpg">
+                    <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/man-sitting.jpg" alt="person" width="360" height="520">
+                </picture>
+                <div class="cs-flex">
+                    <picture class="cs-picture cs-picture1">
+                        <!--Mobile Image-->
+                        <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/man-sitting.jpg">
+                        <!--Tablet and above Image-->
+                        <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/man-sitting.jpg">
+                        <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/man-sitting.jpg" alt="person" width="360" height="420">
+                    </picture>
+                    <picture class="cs-picture cs-picture2">
+                        <!--Mobile Image-->
+                        <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/man-sitting.jpg">
+                        <!--Tablet and above Image-->
+                        <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/man-sitting.jpg">
+                        <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/man-sitting.jpg" alt="person" width="360" height="240">
+                    </picture>
+                </div>
+                <picture class="cs-picture cs-row">
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/man-sitting.jpg">
+                    <!--Tablet and above Image-->
+                    <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/man-sitting.jpg">
+                    <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/man-sitting.jpg" alt="person" width="360" height="520">
+                </picture>
+                <div class="cs-flex">
+                    <picture class="cs-picture cs-picture1">
+                        <!--Mobile Image-->
+                        <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/man-sitting.jpg">
+                        <!--Tablet and above Image-->
+                        <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/man-sitting.jpg">
+                        <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/man-sitting.jpg" alt="person" width="360" height="420">
+                    </picture>
+                    <picture class="cs-picture cs-picture2">
+                        <!--Mobile Image-->
+                        <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/man-sitting.jpg">
+                        <!--Tablet and above Image-->
+                        <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/man-sitting.jpg">
+                        <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/man-sitting.jpg" alt="person" width="360" height="240">
+                    </picture>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {% include 'components/cta.html' %}
 {% endblock %}

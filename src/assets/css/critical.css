@@ -149,6 +149,12 @@
     object-fit: cover;
   }
 }
+/*Tablet - 768px*/
+@media only screen and (min-width: 47rem) {
+  #hero-998 .cs-topper {
+    margin-bottom: -6rem;
+  }
+}
 /* Desktop Parallax - 1400px */
 @media only screen and (min-width: 87.5rem) {
   #hero-998 .cs-background {

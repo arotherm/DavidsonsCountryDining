@@ -1,76 +1,109 @@
 ---
-title: 'About | Code Stitch Web Designs'
-description: 'Meta description for the page'
+title: 'About | Davidson’s Country Dining'
+description: 'Learn about the history and charm of Davidson’s Country Dining, a rustic restaurant offering a cozy, welcoming atmosphere with delicious, locally-sourced meals.'
 preloadImg: '/assets/images/cabinets2.jpg'
 permalink: 'about/'
 eleventyNavigation:
-    key: About Us
-    order: 200
+key: About Us
+order: 200
 ---
 
 {% extends "layouts/base.html" %}
 
 {% block head %}
-    <link rel="stylesheet" href="/assets/css/about.css">
+<link rel="stylesheet" href="/assets/css/about.css">
 {% endblock %}
 
 {% block body %}
-    <!-- ============================================ -->
-    <!--                    LANDING                   -->
-    <!-- ============================================ -->
+<!-- ============================================ -->
+<!--                   Banner                     -->
+<!-- ============================================ -->
 
-    <section id="int-hero">
-        <h1 id="home-h">About Us</h1>
-        <picture>
-            <source media="(max-width: 600px)" srcset="/assets/images/cabinets2-m.jpg">
-            <source media="(min-width: 601px)" srcset="/assets/images/cabinets2.jpg">
-            <img aria-hidden="true" decoding="async" src="/assets/images/cabinets2.jpg" alt="kitchen cabinets" loading="eager" width="2500" height="1667">
+<div id="banner-1014">
+    <div class="cs-container">
+        <picture class="cs-picture">
+            <img class="cs-icon" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Ffancy-divider.svg" alt="divider" width="181" height="36" aria-hidden="true">
         </picture>
+        <p class="cs-text">
+            Discover the warmth and tradition of Davidson’s Country Dining, where every meal is a taste of home.
+        </p>
+    </div>
+    <!--Background Image-->
+    <picture class="cs-background">
+        <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FMISC%2Ftable.jpg">
+        <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FMISC%2Ftable.jpg">
+        <img decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FMISC%2Ftable.jpg" alt="breakfast" width="1920" height="1000">
+    </picture>
+</div>
 
-    </section>
+<!-- ============================================ -->
+<!--                 Side By Side                 -->
+<!-- ============================================ -->
 
-    <!-- ============================================ -->
-    <!--                 Side By Side                 -->
-    <!-- ============================================ -->
-
-    <section id="sbs">
-        <div class="cs-container">
-            <!-- Left Image Section -->
-            <div class="cs-left">
-                <picture class="cs-picture cs-picture1">
-                    <source media="(max-width: 600px)" srcset="/assets/images/cabinets2-m.jpg">
-                    <source media="(min-width: 601px)" srcset="/assets/images/cabinets2.jpg">
-                    <img aria-hidden="true" decoding="async" src="/assets/images/cabinets2.jpg" alt="cabinets" loading="lazy" width="400" height="563">
-                </picture>
-                <picture class="cs-picture cs-picture2">
-                    <source media="(max-width: 600px)" srcset="/assets/images/construction-m.jpg">
-                    <source media="(min-width: 601px)" srcset="/assets/images/construction.jpg">
-                    <img aria-hidden="true" decoding="async" src="/assets/images/construction.jpg" alt="house" loading="lazy" width="400" height="563">
-                </picture>
-            </div>
-            <!-- Right Content Section-->
-            <div class="cs-right">
-                <span class="cs-topper">About Us</span>
-                <h2 class="cs-title">About Company Title</h2>
-                <p class="cs-text">
-                    In consequat tincidunt turpis sit amet imperdiet. Praesent Class officelan nonatoureanor mauris laoreet, iaculis libero quis. Curabitur et tempus eri consequat tincidunt turpis sit amet imperdiet. Praesent nonatourean olei aptent taciti sociosqu ad litora torquent per.
-                </p>
-                <p class="cs-text">
-                    In consequat tincidunt turpis sit amet imperdiet. Praesent Class officelan nonatoureanor mauris laoreet, iaculis libero quis. Curabitur et tempus eri consequat tincidunt turpis sit amet imperdiet. Praesent nonatourean olei aptent taciti sociosqu ad litora torquent per.
-                </p>
-                <div class="cs-flex-group">
-                    <p class="cs-flex-p">
-                        In consequat tincidunt turpis sit amet imperdiet. Praesent Classei consequat tincidunt turpis sit amet imperdiet for mind.
-                    </p>
-                    <span class="cs-name">Justin Time</span>
-                    <span class="cs-job">CEO-Founder</span>
-                    <img class="cs-quote-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/quote-white.svg" alt="gavel" width="136" height="77">
-                </div>
-                <a href="/projects" class="cs-button-solid">Our Projects</a>
+<section id="sbs-1014">
+    <div class="cs-container">
+        <!-- Left Image Section -->
+        <div class="cs-image-group">
+            <picture class="cs-picture cs-picture1">
+                <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Food-Menu/breakfast1.jpg">
+                <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Food-Menu/breakfast1.jpg">
+                <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Food-Menu/breakfast1.jpg" alt="breakfast" width="522" height="581" aria-hidden="true">
+            </picture>
+            <picture class="cs-picture cs-picture2">
+                <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Food-Menu/breakfast2.jpg">
+                <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Food-Menu/breakfast2.jpg">
+                <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Food-Menu/breakfast2.jpg" alt="breakfast" width="414" height="400" aria-hidden="true">
+            </picture>
+        </div>
+        <!-- Right Content Section-->
+        <div class="cs-content">
+            <span class="cs-topper">About Us</span>
+            <h2 class="cs-title">The Story of Davidson’s Country Dining</h2>
+            <p class="cs-text">
+                Nestled in the heart of Innisfil, Davidson’s Country Dining has been a beloved local treasure since its doors first opened in 1980. Born out of a passion for great food and a love for the community, Davidson’s offers more than just a meal; it offers a true culinary experience steeped in tradition and warmth.
+            </p>
+            <p class="cs-text">
+                Our story began when Dan, decided to create a place where the pace of life could slow down, and people could gather over hearty, home-cooked meals. What started as a small family operation has grown into a staple of the community, known for its cozy atmosphere, friendly service, and menu filled with locally-sourced ingredients.
+            </p>
+            <div class="cs-quote">
+                <span class="cs-quote-text">
+                    "At Davidson’s, we believe that the best meals are the ones that bring people together. Our food is a celebration of the simple, honest ingredients that make every dish special."
+                </span>
+                <span class="cs-name">Dan Davidson</span>
+                <span class="cs-job">Owner & Head Chef</span>
+                <img class="cs-quote-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/quote-white.svg" alt="gavel" width="136" height="77">
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    {% include 'components/cta.html' %}
+<!-- ============================================ -->
+<!--                    CTA                       -->
+<!-- ============================================ -->
+
+<section id="cta-1014">
+    <div class="cs-container">
+        <div class="cs-left-section">
+            <h2 class="cs-title">Join Us for a Taste of Tradition!</h2>
+            <a href="" class="cs-button-solid">Make a Reservation</a>
+        </div>
+        <div class="cs-content">
+            <span class="cs-header">Our Hours</span>
+            <p class="cs-p">
+                Wed-Thu: 4:30-8:30 PM <BR> Fri-Sun: 4:00-9:00 PM <BR> Closed Mon-Tue<br>
+            </p>
+            <p class="cs-p">
+                Reservations Recommended, Walk-Ins Welcome.<br>
+            </p>
+        </div>
+        <picture class="cs-background">
+            <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Food-Menu/breakfast3.jpg">
+            <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Food-Menu/breakfast3.jpg">
+            <img aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Food-Menu/breakfast3.jpg" alt="breakfast" width="275" height="132">
+        </picture>
+    </div>
+</section>
+
+
 
 {% endblock %}

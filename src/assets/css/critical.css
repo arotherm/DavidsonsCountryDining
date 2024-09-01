@@ -30,7 +30,7 @@
     line-height: 1.2em;
     width: 100%;
     /* 12px - 24px */
-    margin: 0 0 clamp(0.75rem, 3vw, 1.5rem);
+    margin: 0 0 clamp(0.5rem, 2vw, 1rem);
     color: var(--bodyTextColorWhite);
     display: inline-flex;
     justify-content: center;
@@ -62,13 +62,14 @@
   }
   #hero-998 .cs-logo {
     width: 100%;
-    max-width: 38.375rem;
+    max-width: 75rem;
     margin: 0 0 1.5rem 0;
     display: block;
   }
   #hero-998 .cs-logo img {
     width: 100%;
     height: auto;
+    max-height: 25rem;
   }
   #hero-998 .cs-text {
     /* 16px - 20px */
@@ -149,14 +150,12 @@
     object-fit: cover;
   }
 }
-/*Tablet - 768px*/
-@media only screen and (min-width: 47rem) {
-  #hero-998 .cs-topper {
-    margin-bottom: -6rem;
-  }
-}
 /* Desktop Parallax - 1400px */
 @media only screen and (min-width: 87.5rem) {
+  #hero-998 {
+    padding-bottom: 0;
+    padding-top: 12rem;
+  }
   #hero-998 .cs-background {
     background: url("https://csimg.nyc3.cdn.digitaloceanspaces.com/Hero/table.jpg");
     background-size: cover;

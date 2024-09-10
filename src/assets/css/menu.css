@@ -3,7 +3,7 @@
 <--- -------------------------- -*/
 /* Mobile - 360px */
 @media only screen and (min-width: 0em) {
-  #banner-1018 {
+  #banner-1031 {
     padding: 0 1rem;
     /* 160px - 245px */
     padding-top: clamp(10rem, 25vw, 15.3125rem);
@@ -12,7 +12,7 @@
     position: relative;
     z-index: 1;
   }
-  #banner-1018 .cs-container {
+  #banner-1031 .cs-container {
     text-align: center;
     width: 100%;
     max-width: 80rem;
@@ -22,7 +22,7 @@
     align-items: center;
     flex-direction: column;
   }
-  #banner-1018 .cs-picture {
+  #banner-1031 .cs-picture {
     width: 100%;
     margin: 0 0 0.75rem;
     display: flex;
@@ -31,7 +31,7 @@
     gap: 1rem;
     position: relative;
   }
-  #banner-1018 .cs-picture:before {
+  #banner-1031 .cs-picture:before {
     /* left line */
     content: "";
     width: 50%;
@@ -42,7 +42,7 @@
     position: relative;
     display: block;
   }
-  #banner-1018 .cs-picture:after {
+  #banner-1031 .cs-picture:after {
     /* right line */
     content: "";
     width: 50%;
@@ -53,7 +53,7 @@
     position: relative;
     display: block;
   }
-  #banner-1018 .cs-icon {
+  #banner-1031 .cs-icon {
     width: 40%;
     /* 100px - 180px */
     max-width: clamp(6.25rem, 18vw, 11.25rem);
@@ -61,7 +61,7 @@
     /* prevents flexbox from squishing it */
     flex: none;
   }
-  #banner-1018 .cs-int-title {
+  #banner-1031 .cs-int-title {
     /* 39px - 61px */
     font-size: clamp(2.4375rem, 6.5vw, 3.8125rem);
     font-weight: 900;
@@ -72,7 +72,7 @@
     color: var(--bodyTextColorWhite);
     position: relative;
   }
-  #banner-1018 .cs-text {
+  #banner-1031 .cs-text {
     /* 16px - 20px */
     font-size: clamp(1rem, 2vw, 1.25rem);
     line-height: 1.5em;
@@ -82,7 +82,7 @@
     margin: 0;
     color: var(--bodyTextColorWhite);
   }
-  #banner-1018 .cs-background {
+  #banner-1031 .cs-background {
     width: 100%;
     height: 100%;
     opacity: 0.7;
@@ -92,7 +92,7 @@
     display: block;
     z-index: -1;
   }
-  #banner-1018 .cs-background:before {
+  #banner-1031 .cs-background:before {
     /* black overlay box */
     content: "";
     width: 100%;
@@ -105,7 +105,7 @@
     left: 0;
     z-index: 1;
   }
-  #banner-1018 .cs-background img {
+  #banner-1031 .cs-background img {
     position: absolute;
     top: 0;
     left: 0;
@@ -125,15 +125,11 @@
     scroll-behavior: smooth;
     overflow: initial;
   }
-  #cs-menu-group-1018 {
+  #cs-menu-group-1031 {
     text-align: center;
     height: auto;
-    padding: var(--sectionPadding);
-    padding-left: 0;
-    padding-right: 0;
-    padding-bottom: 0;
   }
-  #cs-menu-group-1018 .cs-container {
+  #cs-menu-group-1031 .cs-container {
     width: 100%;
     /* changes to 1280px at tablet */
     max-width: 34.375rem;
@@ -150,10 +146,10 @@
     gap: clamp(3rem, 6vw, 4rem);
     position: relative;
   }
-  #cs-menu-group-1018 .cs-hidden {
+  #cs-menu-group-1031 .cs-hidden {
     display: none;
   }
-  #cs-menu-group-1018 .cs-button-group {
+  #cs-menu-group-1031 .cs-button-group {
     width: auto;
     max-width: 62.5rem;
     margin: 0 1rem;
@@ -177,7 +173,7 @@
     top: clamp(5.25rem, 8vw, 6.875rem);
     z-index: 1000;
   }
-  #cs-menu-group-1018 .cs-button {
+  #cs-menu-group-1031 .cs-button {
     font-size: 1rem;
     line-height: 1.5em;
     font-weight: 400;
@@ -192,11 +188,11 @@
     position: relative;
     transition: color 0.3s, font-weight 0.3s, color 0.3s;
   }
-  #cs-menu-group-1018 .cs-button:hover {
+  #cs-menu-group-1031 .cs-button:hover {
     color: var(--primary);
     cursor: pointer;
   }
-  #cs-menu-group-1018 .cs-button:after {
+  #cs-menu-group-1031 .cs-button:after {
     /* active state icon */
     content: "";
     position: relative;
@@ -211,24 +207,24 @@
     opacity: 0;
     transition: width 0.3s, opacity 0.3s, margin-left 0.3s;
   }
-  #cs-menu-group-1018 .cs-button.cs-active {
+  #cs-menu-group-1031 .cs-button.cs-active {
     color: var(--headerColor);
     font-weight: 700;
   }
-  #cs-menu-group-1018 .cs-button.cs-active:after {
+  #cs-menu-group-1031 .cs-button.cs-active:after {
     width: clamp(1.5625rem, 3vw, 2.25rem);
     opacity: 1;
     /* 8px - 16px */
     margin-left: clamp(0.5rem, 0.5vw, 1rem);
   }
-  #cs-menu-group-1018 .cs-menu {
+  #cs-menu-group-1031 .cs-menu {
     display: flex;
     flex-direction: column;
     align-items: center;
     /* 32px - 64px */
     gap: clamp(2rem, 6vw, 4rem);
   }
-  #cs-menu-group-1018 .cs-menu.cs-menu-style2 {
+  #cs-menu-group-1031 .cs-menu.cs-menu-style2 {
     /* changes to desktop at desktop */
     background: url("https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FMISC%2Fwood2-m.jpg");
     background-size: cover;
@@ -236,7 +232,7 @@
     background-repeat: no-repeat;
     position: relative;
   }
-  #cs-menu-group-1018 .cs-menu.cs-menu-style2:before {
+  #cs-menu-group-1031 .cs-menu.cs-menu-style2:before {
     content: "";
     width: 100%;
     height: 100%;
@@ -248,21 +244,21 @@
     left: 0;
     z-index: 1;
   }
-  #cs-menu-group-1018 .cs-menu.cs-menu-style2 .cs-title,
-  #cs-menu-group-1018 .cs-menu.cs-menu-style2 .cs-text {
+  #cs-menu-group-1031 .cs-menu.cs-menu-style2 .cs-title,
+  #cs-menu-group-1031 .cs-menu.cs-menu-style2 .cs-text {
     color: var(--bodyTextColorWhite);
   }
-  #cs-menu-group-1018 .cs-menu.cs-menu-style2 .cs-name {
+  #cs-menu-group-1031 .cs-menu.cs-menu-style2 .cs-name {
     color: var(--bodyTextColorWhite);
   }
-  #cs-menu-group-1018 .cs-menu.cs-menu-style2 .cs-menu-p {
+  #cs-menu-group-1031 .cs-menu.cs-menu-style2 .cs-menu-p {
     color: #fff;
     opacity: 0.8;
   }
-  #cs-menu-group-1018 .cs-menu.cs-menu-style3 {
+  #cs-menu-group-1031 .cs-menu.cs-menu-style3 {
     background-color: rgba(255, 255, 255, 0.7);
   }
-  #cs-menu-group-1018 .cs-content {
+  #cs-menu-group-1031 .cs-content {
     /* set text align to left if content needs to be left aligned */
     text-align: center;
     width: 100%;
@@ -273,7 +269,7 @@
     position: relative;
     z-index: 20;
   }
-  #cs-menu-group-1018 .cs-text {
+  #cs-menu-group-1031 .cs-text {
     font-size: var(--bodyFontSize);
     line-height: 1.5em;
     text-align: inherit;
@@ -282,7 +278,7 @@
     margin: 0;
     color: var(--bodyTextColor);
   }
-  #cs-menu-group-1018 .cs-menu-list {
+  #cs-menu-group-1031 .cs-menu-list {
     width: 100%;
     margin: 0;
     padding: 0;
@@ -293,14 +289,14 @@
     position: relative;
     z-index: 20;
   }
-  #cs-menu-group-1018 .cs-menu-row {
+  #cs-menu-group-1031 .cs-menu-row {
     display: flex;
     flex-direction: column;
     align-items: stretch;
     /* 32px - 60px */
     row-gap: clamp(2rem, 6vw, 3.75rem);
   }
-  #cs-menu-group-1018 .cs-menu-item {
+  #cs-menu-group-1031 .cs-menu-item {
     text-align: left;
     list-style: none;
     margin: 0;
@@ -309,7 +305,7 @@
     flex-direction: column;
     gap: 1rem;
   }
-  #cs-menu-group-1018 .cs-h3 {
+  #cs-menu-group-1031 .cs-h3 {
     /* 20px - 25px */
     font-size: clamp(1.25rem, 2vw, 1.5625rem);
     line-height: 1.2em;
@@ -322,7 +318,7 @@
     gap: 1rem;
     position: relative;
   }
-  #cs-menu-group-1018 .cs-h3:after {
+  #cs-menu-group-1031 .cs-h3:after {
     /* divider line */
     content: "";
     width: 50%;
@@ -333,18 +329,19 @@
     display: block;
     order: 1;
   }
-  #cs-menu-group-1018 .cs-name {
+  #cs-menu-group-1031 .cs-name {
     /* 16px - 25px */
     font-size: clamp(1rem, 2vw, 1.5625rem);
     line-height: 1.2em;
-    max-width: 16ch;
+    margin: 0;
+    max-width: 18ch;
     margin-right: auto;
-    color: var(--headerColor);
+    color: var(--bodyTextColor);
     display: block;
     /* prevents flexbox from squishing it */
     flex: none;
   }
-  #cs-menu-group-1018 .cs-price {
+  #cs-menu-group-1031 .cs-price {
     /* 20px - 25px */
     font-size: clamp(1.25rem, 2vw, 1.5625rem);
     line-height: 1.2em;
@@ -364,7 +361,7 @@
     /* forces it into the 3rd position */
     order: 3;
   }
-  #cs-menu-group-1018 .cs-menu-p {
+  #cs-menu-group-1031 .cs-menu-p {
     /* 14px - 16px */
     font-size: clamp(0.875rem, 1.5vw, 1rem);
     line-height: 1.5em;
@@ -376,75 +373,75 @@
 }
 /* Tablet - 768px */
 @media only screen and (min-width: 48rem) {
-  #cs-menu-group-1018 .cs-container {
+  #cs-menu-group-1031 .cs-container {
     max-width: 80rem;
   }
-  #cs-menu-group-1018 .cs-menu.cs-menu-style2 {
+  #cs-menu-group-1031 .cs-menu.cs-menu-style2 {
     background: url("https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FMISC%2Fwood.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
   }
-  #cs-menu-group-1018 .cs-menu-row {
+  #cs-menu-group-1031 .cs-menu-row {
     width: 100%;
     flex-direction: row;
     justify-content: stretch;
     /* 32px - 80px */
     gap: clamp(2em, 4vw, 5rem);
   }
-  #cs-menu-group-1018 .cs-menu-row.cs-3 .cs-h3 {
+  #cs-menu-group-1031 .cs-menu-row.cs-3 .cs-h3 {
     gap: 0.5rem;
   }
-  #cs-menu-group-1018 .cs-menu-row.cs-3 .cs-h3:after {
+  #cs-menu-group-1031 .cs-menu-row.cs-3 .cs-h3:after {
     display: none;
   }
-  #cs-menu-group-1018 .cs-menu-row.cs-3 .cs-name {
+  #cs-menu-group-1031 .cs-menu-row.cs-3 .cs-name {
     font-size: clamp(1rem, 2vw, 1.5625rem);
     width: 70%;
     max-width: 20ch;
   }
-  #cs-menu-group-1018 .cs-menu-item {
+  #cs-menu-group-1031 .cs-menu-item {
     max-width: 37.5rem;
     margin: 0 auto;
   }
-  #cs-menu-group-1018 .cs-name {
+  #cs-menu-group-1031 .cs-name {
     width: fit-content;
     max-width: 70%;
   }
 }
 /* Dark Mode */
 @media only screen and (min-width: 0rem) {
-  body.dark-mode #cs-menu-group-1018 {
+  body.dark-mode #cs-menu-group-1031 {
     background-color: rgba(0, 0, 0, 0.5);
   }
-  body.dark-mode #cs-menu-group-1018 .cs-button-group {
+  body.dark-mode #cs-menu-group-1031 .cs-button-group {
     background-color: var(--medium);
   }
-  body.dark-mode #cs-menu-group-1018 .cs-button {
+  body.dark-mode #cs-menu-group-1031 .cs-button {
     color: #fff;
   }
-  body.dark-mode #cs-menu-group-1018 .cs-button:hover {
+  body.dark-mode #cs-menu-group-1031 .cs-button:hover {
     color: var(--secondary);
   }
-  body.dark-mode #cs-menu-group-1018 .cs-title,
-  body.dark-mode #cs-menu-group-1018 .cs-text,
-  body.dark-mode #cs-menu-group-1018 .cs-name,
-  body.dark-mode #cs-menu-group-1018 .cs-menu-p {
+  body.dark-mode #cs-menu-group-1031 .cs-title,
+  body.dark-mode #cs-menu-group-1031 .cs-text,
+  body.dark-mode #cs-menu-group-1031 .cs-name,
+  body.dark-mode #cs-menu-group-1031 .cs-menu-p {
     color: var(--bodyTextColorWhite);
   }
-  body.dark-mode #cs-menu-group-1018 .cs-text,
-  body.dark-mode #cs-menu-group-1018 .cs-menu-p {
+  body.dark-mode #cs-menu-group-1031 .cs-text,
+  body.dark-mode #cs-menu-group-1031 .cs-menu-p {
     opacity: 0.8;
   }
-  body.dark-mode #cs-menu-group-1018 .cs-price {
+  body.dark-mode #cs-menu-group-1031 .cs-price {
     background-color: var(--medium);
     color: var(--secondary);
   }
-  body.dark-mode #cs-menu-group-1018 .cs-menu-style2 .cs-price {
+  body.dark-mode #cs-menu-group-1031 .cs-menu-style2 .cs-price {
     color: var(--primary);
     background-color: #fff;
   }
-  body.dark-mode #cs-menu-group-1018 .cs-menu-style3 {
+  body.dark-mode #cs-menu-group-1031 .cs-menu-style3 {
     background-color: rgba(255, 255, 255, 0.03);
   }
 }

@@ -1,17 +1,18 @@
 ---
-title: 'Project One | Code Stitch Web Designs'
+title: 'Menu | Code Stitch Web Designs'
 description: 'Menu'
 preloadImg: '/assets/images/cabinets2.jpg'
 permalink: 'menu/'
 eleventyNavigation:
 key: Menu
-order: 3100
+order: 3200
 ---
 
 {% extends "layouts/base.html" %}
 
 {% block head %}
 <link rel="stylesheet" href="/assets/css/menu.css">
+<script defer src ="/assets/js/menu.js"></script>
 {% endblock %}
 
 {% block body %}
@@ -19,14 +20,14 @@ order: 3100
 <!--                   Banner                     -->
 <!-- ============================================ -->
 
-<div id="banner-1031">
+<div id="banner-1018">
     <div class="cs-container">
         <picture class="cs-picture">
             <img class="cs-icon" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Ffancy-divider.svg" alt="divider" width="181" height="36" aria-hidden="true">
         </picture>
         <span class="cs-int-title">Our Complete Menu</span>
         <p class="cs-text">
-            Explore our range of delicious meals, made with fresh ingredients and prepared to perfection.
+            Please take a moment to look at our menu, if you have any questions, feel free to call us!
         </p>
     </div>
     <!--Background Image-->
@@ -41,250 +42,1809 @@ order: 3100
 <!--                  Menu Group                  -->
 <!-- ============================================ -->
 
-<div id="cs-menu-group-1031">
-    <!-- Tapas -->
-    <div id="cs-menu1-1031" class="cs-menu-group">
-        <!-- Tapas Section -->
+<!--
+
+Menu Rules
+
+
+1) The menu items are broken up in to rows (cs-menu-row) so we can have an easier time arranging the menu items for more flexibility.
+
+2) There are 2 menu items by default in the cs-menu-row, if you need a third menu item, add a class .cs-3 to the .cs-menu-row. This will change the styles to account for a third option and look much better.
+
+3) Inside the cs-menu-group each menu section in wrapped in a .cs-menu class. We have two types of menu styles.  There's the default and cs-menu-style2. cs-menu-style2 makes the dark wood background section style you see.  When you need to make extra .cs-menu groups for your menu group, you just copy and paste the .cs-menu under the last one.  And if you want that menu to have the wood background for variety, just add the .cs-menu-style2 class after the cs-menu class and it will automatically add the new style.
+
+We recommend not having two cs-menu-style2 groups one after the other. It works best when it alternates, like in the default menu we provided. You don't have to use it at all if you don't want it.  Remove that class and your menu will be uniform.
+
+4) For easier code management, collapse all "#cs-menu .cs-menu" section tags.  So #cs-menu1, #cs-menu2, #cs-menu3, etc will have their .cs-menu section tags collapsed. Makes it easier to go up and down the document.  You can also add your own menu styles or edit the ones we have for you to be more suited for your design.
+
+5) ADD NEW MENUS - When you need to add more menus, copy and paste the .cs-button in .cs-button-group and change the data-filter to the next number ("six" if you still have the default 5 items). Then make sure you change its ID to the next menu number (#cs-menu6 if you added a 6th one, #cs-menu 7 and so on) and change the onclick location to the same ID number.
+
+For quick reference:
+
+.cs-menu-style2 = dark wood background
+.cs-menu-style3 = white background with opacity
+
+.cs-3 = when placed on .cs-menu-row it turns the row into a 3 item flexbox
+
+-->
+
+<div id="cs-menu-group-1018">
+    <div class="cs-button-group">
+        <button class="cs-button cs-active" data-filter="one" onclick="window.location.href='#cs-menu-group';">
+            Tapas
+        </button>
+        <button class="cs-button" data-filter="two" onclick="window.location.href='#cs-menu-group';">
+            Light Fare
+        </button>
+        <button class="cs-button" data-filter="three" onclick="window.location.href='#cs-menu-group';">
+            Entreés
+        </button>
+        <button class="cs-button" data-filter="four" onclick="window.location.href='#cs-menu-group';">
+            Desserts
+        </button>
+        <button class="cs-button" data-filter="five" onclick="window.location.href='#cs-menu-group';">
+            Drinks
+        </button>
+    </div>
+    <!--Breakfast-->
+    <div id="cs-menu1-1018" class="cs-menu-group" data-category="one">
+        <!--Breakfast Section 1-->
         <section class="cs-menu">
             <div class="cs-container">
                 <div class="cs-content">
-                    <h2 class="cs-title">Tapas</h2>
+                    <h2 class="cs-title">Breakfast</h2>
                     <p class="cs-text">
-                        Start your meal with our exquisite selection of tapas.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
                     </p>
                 </div>
                 <ul class="cs-menu-list">
-                    <div class="cs-menu-row">
+                    <!--If you want a row of three, add cs-3 class to the row and it will format to the a 3 item menu row-->
+                    <div class="cs-menu-row cs-3">
                         <div class="cs-menu-item">
                             <h3 class="cs-h3">
-                                <span class="cs-name">Soup of the Day</span>
-                                <span class="cs-price">$9</span>
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
                             </h3>
                             <p class="cs-menu-p">
-                                Always fresh. Ask your server for details.
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
                             </p>
                         </div>
                         <div class="cs-menu-item">
                             <h3 class="cs-h3">
-                                <span class="cs-name">French Onion Soup</span>
-                                <span class="cs-price">$12</span>
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
                             </h3>
                             <p class="cs-menu-p">
-                                A rich broth made with sweet onions, topped and broiled with fresh mozzarella cheese.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="cs-menu-row">
-                        <div class="cs-menu-item">
-                            <h3 class="cs-h3">
-                                <span class="cs-name">Classic Greek Salad</span>
-                                <span class="cs-price">$13 (Appetizer) / $17 (Entrée)</span>
-                            </h3>
-                            <p class="cs-menu-p">
-                                Our house-made Greek vinaigrette dressing drizzled over a bed of romaine lettuce along with tomato, cucumber, peppers, red onion, feta, and black olives.
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
                             </p>
                         </div>
                         <div class="cs-menu-item">
                             <h3 class="cs-h3">
-                                <span class="cs-name">Davidson's Famous Caesar Salad</span>
-                                <span class="cs-price">$12 (Appetizer) / $16 (Entrée)</span>
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
                             </h3>
                             <p class="cs-menu-p">
-                                Romaine lettuce tossed with croutons, parmigiana, bacon bits, and our renowned homemade dressing. Add Shrimp +$10, Chicken +$7.
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
                             </p>
                         </div>
                     </div>
                     <div class="cs-menu-row">
                         <div class="cs-menu-item">
                             <h3 class="cs-h3">
-                                <span class="cs-name">Escargot</span>
-                                <span class="cs-price">$16</span>
+                                <span class="cs-name">Purple Corn Tostada Combo</span>
+                                <span class="cs-price">$56</span>
                             </h3>
                             <p class="cs-menu-p">
-                                Escargots sautéed with fresh garlic, Pernod, and topped with freshly grated mozzarella broiled to a golden brown perfection.
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
                             </p>
                         </div>
                         <div class="cs-menu-item">
                             <h3 class="cs-h3">
-                                <span class="cs-name">Mushroom Crostini</span>
-                                <span class="cs-price">$16</span>
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
                             </h3>
                             <p class="cs-menu-p">
-                                Garlic toast topped with sautéed mushrooms, parmigiana, bacon, and fresh seasonings.
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
                             </p>
                         </div>
                     </div>
                     <div class="cs-menu-row">
                         <div class="cs-menu-item">
                             <h3 class="cs-h3">
-                                <span class="cs-name">Crab Cakes</span>
-                                <span class="cs-price">$18</span>
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
                             </h3>
                             <p class="cs-menu-p">
-                                Two crab cakes made fresh in house on a bed of fresh greens and topped with a smoky ancho-mayo.
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
                             </p>
                         </div>
                         <div class="cs-menu-item">
                             <h3 class="cs-h3">
-                                <span class="cs-name">Mussels</span>
-                                <span class="cs-price">$18</span>
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
                             </h3>
                             <p class="cs-menu-p">
-                                Fresh mussels sautéed with your choice of our house marinara or a creamy white wine sauce, served with garlic toast.
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="cs-menu-row">
+                        <div class="cs-menu-item">
+                            <h3 class="cs-h3">
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
+                            </h3>
+                            <p class="cs-menu-p">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                        </div>
+                        <div class="cs-menu-item">
+                            <h3 class="cs-h3">
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
+                            </h3>
+                            <p class="cs-menu-p">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="cs-menu-row">
+                        <div class="cs-menu-item">
+                            <h3 class="cs-h3">
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
+                            </h3>
+                            <p class="cs-menu-p">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                        </div>
+                        <div class="cs-menu-item">
+                            <h3 class="cs-h3">
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
+                            </h3>
+                            <p class="cs-menu-p">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
                             </p>
                         </div>
                     </div>
                 </ul>
             </div>
         </section>
-    </div>
-
-    <!-- Light Fare -->
-    <div id="cs-menu2-1031" class="cs-menu-group">
-        <!-- Light Fare Section -->
+        <!--Breakfast Section 2-->
         <section class="cs-menu cs-menu-style2">
             <div class="cs-container">
                 <div class="cs-content">
-                    <h2 class="cs-title">Light Fare</h2>
+                    <h2 class="cs-title">Breakfast Section 2</h2>
                     <p class="cs-text">
-                        Perfectly portioned dishes for a lighter appetite.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
                     </p>
                 </div>
                 <ul class="cs-menu-list">
                     <div class="cs-menu-row">
-                        <div class="cs-menu-item">
+                        <li class="cs-menu-item">
                             <h3 class="cs-h3">
-                                <span class="cs-name">Stuffed Yorkshire Pudding</span>
-                                <span class="cs-price">$26</span>
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
                             </h3>
                             <p class="cs-menu-p">
-                                Sky high homemade Yorkshire pudding stuffed with shaved rib eye beef and braised beef, topped with our house country gravy.
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
                             </p>
-                        </div>
-                        <div class="cs-menu-item">
+                        </li>
+                        <li class="cs-menu-item">
                             <h3 class="cs-h3">
-                                <span class="cs-name">Davidson’s Clubhouse</span>
-                                <span class="cs-price">$25</span>
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
                             </h3>
                             <p class="cs-menu-p">
-                                In house roasted chicken layered with bacon, cheddar, tomato, and lettuce on your choice of either white or whole wheat bread.
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
                             </p>
-                        </div>
+                        </li>
                     </div>
                     <div class="cs-menu-row">
-                        <div class="cs-menu-item">
+                        <li class="cs-menu-item">
                             <h3 class="cs-h3">
-                                <span class="cs-name">Fish and Chips</span>
-                                <span class="cs-price">$22</span>
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
                             </h3>
                             <p class="cs-menu-p">
-                                Our homemade beer battered haddock fried to a golden brown and served with our fresh cut fries.
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
                             </p>
-                        </div>
-                        <div class="cs-menu-item">
+                        </li>
+                        <li class="cs-menu-item">
                             <h3 class="cs-h3">
-                                <span class="cs-name">Beef Burger</span>
-                                <span class="cs-price">$22</span>
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
                             </h3>
                             <p class="cs-menu-p">
-                                Prime rib burger char-grilled and topped the way you like. Add Cheese + $2 Add Bacon + $3.
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
                             </p>
-                        </div>
+                        </li>
                     </div>
                     <div class="cs-menu-row">
-                        <div class="cs-menu-item">
+                        <li class="cs-menu-item">
                             <h3 class="cs-h3">
-                                <span class="cs-name">Chicken Tenders</span>
-                                <span class="cs-price">$18</span>
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
                             </h3>
                             <p class="cs-menu-p">
-                                House made chicken tenders served with our fresh cut fries and a sweet plum sauce.
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
                             </p>
-                        </div>
+                        </li>
+                        <li class="cs-menu-item">
+                            <h3 class="cs-h3">
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
+                            </h3>
+                            <p class="cs-menu-p">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                        </li>
+                    </div>
+                    <div class="cs-menu-row">
+                        <li class="cs-menu-item">
+                            <h3 class="cs-h3">
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
+                            </h3>
+                            <p class="cs-menu-p">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                        </li>
+                        <li class="cs-menu-item">
+                            <h3 class="cs-h3">
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
+                            </h3>
+                            <p class="cs-menu-p">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                        </li>
+                    </div>
+                    <div class="cs-menu-row">
+                        <li class="cs-menu-item">
+                            <h3 class="cs-h3">
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
+                            </h3>
+                            <p class="cs-menu-p">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                        </li>
+                        <li class="cs-menu-item">
+                            <h3 class="cs-h3">
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
+                            </h3>
+                            <p class="cs-menu-p">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                        </li>
+                    </div>
+                </ul>
+            </div>
+        </section>
+        <!--Breakfast Section 3-->
+        <section class="cs-menu">
+            <div class="cs-container">
+                <div class="cs-content">
+                    <h2 class="cs-title">Breakfast Section 3</h2>
+                    <p class="cs-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+                    </p>
+                </div>
+                <ul class="cs-menu-list">
+                    <div class="cs-menu-row">
+                        <li class="cs-menu-item">
+                            <h3 class="cs-h3">
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
+                            </h3>
+                            <p class="cs-menu-p">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                        </li>
+                        <li class="cs-menu-item">
+                            <h3 class="cs-h3">
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
+                            </h3>
+                            <p class="cs-menu-p">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                        </li>
+                    </div>
+                    <div class="cs-menu-row">
+                        <li class="cs-menu-item">
+                            <h3 class="cs-h3">
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
+                            </h3>
+                            <p class="cs-menu-p">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                        </li>
+                        <li class="cs-menu-item">
+                            <h3 class="cs-h3">
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
+                            </h3>
+                            <p class="cs-menu-p">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                        </li>
+                    </div>
+                    <div class="cs-menu-row">
+                        <li class="cs-menu-item">
+                            <h3 class="cs-h3">
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
+                            </h3>
+                            <p class="cs-menu-p">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                        </li>
+                        <li class="cs-menu-item">
+                            <h3 class="cs-h3">
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
+                            </h3>
+                            <p class="cs-menu-p">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                        </li>
+                    </div>
+                    <div class="cs-menu-row">
+                        <li class="cs-menu-item">
+                            <h3 class="cs-h3">
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
+                            </h3>
+                            <p class="cs-menu-p">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                        </li>
+                        <li class="cs-menu-item">
+                            <h3 class="cs-h3">
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
+                            </h3>
+                            <p class="cs-menu-p">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                        </li>
+                    </div>
+                    <div class="cs-menu-row">
+                        <li class="cs-menu-item">
+                            <h3 class="cs-h3">
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
+                            </h3>
+                            <p class="cs-menu-p">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                        </li>
+                        <li class="cs-menu-item">
+                            <h3 class="cs-h3">
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
+                            </h3>
+                            <p class="cs-menu-p">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                        </li>
                     </div>
                 </ul>
             </div>
         </section>
     </div>
-
-    <!-- Entrees -->
-    <div id="cs-menu3-1031" class="cs-menu-group">
-        <!-- Entrees Section -->
+    <!--Lunch-->
+    <div id="cs-menu2-1018" class="cs-menu-group" data-category="two">
+        <!--Lunch Section 1-->
         <section class="cs-menu">
             <div class="cs-container">
                 <div class="cs-content">
-                    <h2 class="cs-title">Entrees</h2>
+                    <h2 class="cs-title">Lunch</h2>
                     <p class="cs-text">
-                        Hearty and fulfilling entrees made to satisfy.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+                    </p>
+                </div>
+                <div class="cs-menu-list">
+                    <!--If you want a row of three, add cs-3 class to the row and it will format to the a 3 item menu row-->
+                    <div class="cs-menu-row cs-3">
+                        <div class="cs-menu-item">
+                            <h3 class="cs-h3">
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
+                            </h3>
+                            <p class="cs-menu-p">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                        </div>
+                        <div class="cs-menu-item">
+                            <h3 class="cs-h3">
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
+                            </h3>
+                            <p class="cs-menu-p">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                        </div>
+                        <div class="cs-menu-item">
+                            <h3 class="cs-h3">
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
+                            </h3>
+                            <p class="cs-menu-p">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="cs-menu-row">
+                        <div class="cs-menu-item">
+                            <h3 class="cs-h3">
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
+                            </h3>
+                            <p class="cs-menu-p">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                        </div>
+                        <div class="cs-menu-item">
+                            <h3 class="cs-h3">
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
+                            </h3>
+                            <p class="cs-menu-p">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="cs-menu-row">
+                        <div class="cs-menu-item">
+                            <h3 class="cs-h3">
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
+                            </h3>
+                            <p class="cs-menu-p">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                        </div>
+                        <div class="cs-menu-item">
+                            <h3 class="cs-h3">
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
+                            </h3>
+                            <p class="cs-menu-p">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="cs-menu-row">
+                        <div class="cs-menu-item">
+                            <h3 class="cs-h3">
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
+                            </h3>
+                            <p class="cs-menu-p">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                        </div>
+                        <div class="cs-menu-item">
+                            <h3 class="cs-h3">
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
+                            </h3>
+                            <p class="cs-menu-p">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="cs-menu-row">
+                        <div class="cs-menu-item">
+                            <h3 class="cs-h3">
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
+                            </h3>
+                            <p class="cs-menu-p">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                        </div>
+                        <div class="cs-menu-item">
+                            <h3 class="cs-h3">
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
+                            </h3>
+                            <p class="cs-menu-p">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                        </div>
+                    </div>
+                    </ul>
+                </div>
+        </section>
+        <!--Lunch Section Section 2-->
+        <section class="cs-menu cs-menu-style2">
+            <div class="cs-container">
+                <div class="cs-content">
+                    <h2 class="cs-title">Lunch Section 2</h2>
+                    <p class="cs-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
                     </p>
                 </div>
                 <ul class="cs-menu-list">
                     <div class="cs-menu-row">
-                        <div class="cs-menu-item">
+                        <li class="cs-menu-item">
                             <h3 class="cs-h3">
-                                <span class="cs-name">Chicken Schnitzel</span>
-                                <span class="cs-price">$28</span>
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
                             </h3>
                             <p class="cs-menu-p">
-                                Tender chicken cutlet breaded and fried to perfection, served with our infused honey.
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                        </li>
+                        <li class="cs-menu-item">
+                            <h3 class="cs-h3">
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
+                            </h3>
+                            <p class="cs-menu-p">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                        </li>
+                    </div>
+                    <div class="cs-menu-row">
+                        <li class="cs-menu-item">
+                            <h3 class="cs-h3">
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
+                            </h3>
+                            <p class="cs-menu-p">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                        </li>
+                        <li class="cs-menu-item">
+                            <h3 class="cs-h3">
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
+                            </h3>
+                            <p class="cs-menu-p">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                        </li>
+                    </div>
+                    <div class="cs-menu-row">
+                        <li class="cs-menu-item">
+                            <h3 class="cs-h3">
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
+                            </h3>
+                            <p class="cs-menu-p">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                        </li>
+                        <li class="cs-menu-item">
+                            <h3 class="cs-h3">
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
+                            </h3>
+                            <p class="cs-menu-p">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                        </li>
+                    </div>
+                    <div class="cs-menu-row">
+                        <li class="cs-menu-item">
+                            <h3 class="cs-h3">
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
+                            </h3>
+                            <p class="cs-menu-p">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                        </li>
+                        <li class="cs-menu-item">
+                            <h3 class="cs-h3">
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
+                            </h3>
+                            <p class="cs-menu-p">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                        </li>
+                    </div>
+                    <div class="cs-menu-row">
+                        <li class="cs-menu-item">
+                            <h3 class="cs-h3">
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
+                            </h3>
+                            <p class="cs-menu-p">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                        </li>
+                        <li class="cs-menu-item">
+                            <h3 class="cs-h3">
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
+                            </h3>
+                            <p class="cs-menu-p">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                        </li>
+                    </div>
+                </ul>
+            </div>
+        </section>
+        <!--Lunch Section Section 3-->
+        <section class="cs-menu">
+            <div class="cs-container">
+                <div class="cs-content">
+                    <h2 class="cs-title">Lunch Section 3</h2>
+                    <p class="cs-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+                    </p>
+                </div>
+                <ul class="cs-menu-list">
+                    <div class="cs-menu-row">
+                        <li class="cs-menu-item">
+                            <h3 class="cs-h3">
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
+                            </h3>
+                            <p class="cs-menu-p">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                        </li>
+                        <li class="cs-menu-item">
+                            <h3 class="cs-h3">
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
+                            </h3>
+                            <p class="cs-menu-p">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                        </li>
+                    </div>
+                    <div class="cs-menu-row">
+                        <li class="cs-menu-item">
+                            <h3 class="cs-h3">
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
+                            </h3>
+                            <p class="cs-menu-p">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                        </li>
+                        <li class="cs-menu-item">
+                            <h3 class="cs-h3">
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
+                            </h3>
+                            <p class="cs-menu-p">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                        </li>
+                    </div>
+                    <div class="cs-menu-row">
+                        <li class="cs-menu-item">
+                            <h3 class="cs-h3">
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
+                            </h3>
+                            <p class="cs-menu-p">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                        </li>
+                        <li class="cs-menu-item">
+                            <h3 class="cs-h3">
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
+                            </h3>
+                            <p class="cs-menu-p">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                        </li>
+                    </div>
+                    <div class="cs-menu-row">
+                        <li class="cs-menu-item">
+                            <h3 class="cs-h3">
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
+                            </h3>
+                            <p class="cs-menu-p">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                        </li>
+                        <li class="cs-menu-item">
+                            <h3 class="cs-h3">
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
+                            </h3>
+                            <p class="cs-menu-p">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                        </li>
+                    </div>
+                    <div class="cs-menu-row">
+                        <li class="cs-menu-item">
+                            <h3 class="cs-h3">
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
+                            </h3>
+                            <p class="cs-menu-p">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                        </li>
+                        <li class="cs-menu-item">
+                            <h3 class="cs-h3">
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
+                            </h3>
+                            <p class="cs-menu-p">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                        </li>
+                    </div>
+                </ul>
+            </div>
+        </section>
+    </div>
+    <!--Dinner-->
+    <div id="cs-menu3-1018" class="cs-menu-group" data-category="three">
+        <!--Dinner Section 1-->
+        <section class="cs-menu">
+            <div class="cs-container">
+                <div class="cs-content">
+                    <h2 class="cs-title">Dinner</h2>
+                    <p class="cs-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+                    </p>
+                </div>
+                <div class="cs-menu-list">
+                    <!--If you want a row of three, add cs-3 class to the row and it will format to the a 3 item menu row-->
+                    <div class="cs-menu-row cs-3">
+                        <div class="cs-menu-item">
+                            <h3 class="cs-h3">
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
+                            </h3>
+                            <p class="cs-menu-p">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
                             </p>
                         </div>
                         <div class="cs-menu-item">
                             <h3 class="cs-h3">
-                                <span class="cs-name">Davidson’s Meatloaf</span>
-                                <span class="cs-price">$26</span>
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
                             </h3>
                             <p class="cs-menu-p">
-                                A classic meatloaf made with chuck beef combined with our house seasonings, topped with our country gravy.
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                        </div>
+                        <div class="cs-menu-item">
+                            <h3 class="cs-h3">
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
+                            </h3>
+                            <p class="cs-menu-p">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
                             </p>
                         </div>
                     </div>
                     <div class="cs-menu-row">
                         <div class="cs-menu-item">
                             <h3 class="cs-h3">
-                                <span class="cs-name">Liver and Onions</span>
-                                <span class="cs-price">$24</span>
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
                             </h3>
                             <p class="cs-menu-p">
-                                Two pieces of liver cooked to your preference, topped with sautéed onions and our country gravy. Add bacon +$3.
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
                             </p>
                         </div>
                         <div class="cs-menu-item">
                             <h3 class="cs-h3">
-                                <span class="cs-name">AAA Striploin Steak</span>
-                                <span class="cs-price">$38</span>
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
                             </h3>
                             <p class="cs-menu-p">
-                                10oz centre cut striploin, char-grilled to your preference.
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
                             </p>
                         </div>
                     </div>
                     <div class="cs-menu-row">
                         <div class="cs-menu-item">
                             <h3 class="cs-h3">
-                                <span class="cs-name">Prime Rib Dinner</span>
-                                <span class="cs-price">$42 (8oz) / $44 (10oz) / $46 (12oz)</span>
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
                             </h3>
                             <p class="cs-menu-p">
-                                Our famous slow and low roasted prime rib served with seasonal vegetables, topped with our country gravy and your choice of potato. Add Yorkshire pudding +$4.
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
                             </p>
                         </div>
                         <div class="cs-menu-item">
                             <h3 class="cs-h3">
-                                <span class="cs-name">Fresh Fish of the Day</span>
-                                <span class="cs-price">$34</span>
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
                             </h3>
                             <p class="cs-menu-p">
-                                Ask your server for details.
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
                             </p>
                         </div>
+                    </div>
+                    <div class="cs-menu-row">
+                        <div class="cs-menu-item">
+                            <h3 class="cs-h3">
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
+                            </h3>
+                            <p class="cs-menu-p">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                        </div>
+                        <div class="cs-menu-item">
+                            <h3 class="cs-h3">
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
+                            </h3>
+                            <p class="cs-menu-p">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="cs-menu-row">
+                        <div class="cs-menu-item">
+                            <h3 class="cs-h3">
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
+                            </h3>
+                            <p class="cs-menu-p">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                        </div>
+                        <div class="cs-menu-item">
+                            <h3 class="cs-h3">
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
+                            </h3>
+                            <p class="cs-menu-p">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                        </div>
+                    </div>
+                    </ul>
+                </div>
+        </section>
+        <!--Dinner Section 2-->
+        <section class="cs-menu cs-menu-style2">
+            <div class="cs-container">
+                <div class="cs-content">
+                    <h2 class="cs-title">Dinner Section 2</h2>
+                    <p class="cs-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+                    </p>
+                </div>
+                <ul class="cs-menu-list">
+                    <div class="cs-menu-row">
+                        <li class="cs-menu-item">
+                            <h3 class="cs-h3">
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
+                            </h3>
+                            <p class="cs-menu-p">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                        </li>
+                        <li class="cs-menu-item">
+                            <h3 class="cs-h3">
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
+                            </h3>
+                            <p class="cs-menu-p">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                        </li>
+                    </div>
+                    <div class="cs-menu-row">
+                        <li class="cs-menu-item">
+                            <h3 class="cs-h3">
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
+                            </h3>
+                            <p class="cs-menu-p">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                        </li>
+                        <li class="cs-menu-item">
+                            <h3 class="cs-h3">
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
+                            </h3>
+                            <p class="cs-menu-p">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                        </li>
+                    </div>
+                    <div class="cs-menu-row">
+                        <li class="cs-menu-item">
+                            <h3 class="cs-h3">
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
+                            </h3>
+                            <p class="cs-menu-p">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                        </li>
+                        <li class="cs-menu-item">
+                            <h3 class="cs-h3">
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
+                            </h3>
+                            <p class="cs-menu-p">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                        </li>
+                    </div>
+                    <div class="cs-menu-row">
+                        <li class="cs-menu-item">
+                            <h3 class="cs-h3">
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
+                            </h3>
+                            <p class="cs-menu-p">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                        </li>
+                        <li class="cs-menu-item">
+                            <h3 class="cs-h3">
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
+                            </h3>
+                            <p class="cs-menu-p">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                        </li>
+                    </div>
+                    <div class="cs-menu-row">
+                        <li class="cs-menu-item">
+                            <h3 class="cs-h3">
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
+                            </h3>
+                            <p class="cs-menu-p">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                        </li>
+                        <li class="cs-menu-item">
+                            <h3 class="cs-h3">
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
+                            </h3>
+                            <p class="cs-menu-p">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                        </li>
+                    </div>
+                </ul>
+            </div>
+        </section>
+        <!--Dinner Section 3-->
+        <section class="cs-menu">
+            <div class="cs-container">
+                <div class="cs-content">
+                    <h2 class="cs-title">Dinner Section 3</h2>
+                    <p class="cs-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+                    </p>
+                </div>
+                <ul class="cs-menu-list">
+                    <div class="cs-menu-row">
+                        <li class="cs-menu-item">
+                            <h3 class="cs-h3">
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
+                            </h3>
+                            <p class="cs-menu-p">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                        </li>
+                        <li class="cs-menu-item">
+                            <h3 class="cs-h3">
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
+                            </h3>
+                            <p class="cs-menu-p">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                        </li>
+                    </div>
+                    <div class="cs-menu-row">
+                        <li class="cs-menu-item">
+                            <h3 class="cs-h3">
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
+                            </h3>
+                            <p class="cs-menu-p">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                        </li>
+                        <li class="cs-menu-item">
+                            <h3 class="cs-h3">
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
+                            </h3>
+                            <p class="cs-menu-p">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                        </li>
+                    </div>
+                    <div class="cs-menu-row">
+                        <li class="cs-menu-item">
+                            <h3 class="cs-h3">
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
+                            </h3>
+                            <p class="cs-menu-p">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                        </li>
+                        <li class="cs-menu-item">
+                            <h3 class="cs-h3">
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
+                            </h3>
+                            <p class="cs-menu-p">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                        </li>
+                    </div>
+                    <div class="cs-menu-row">
+                        <li class="cs-menu-item">
+                            <h3 class="cs-h3">
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
+                            </h3>
+                            <p class="cs-menu-p">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                        </li>
+                        <li class="cs-menu-item">
+                            <h3 class="cs-h3">
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
+                            </h3>
+                            <p class="cs-menu-p">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                        </li>
+                    </div>
+                    <div class="cs-menu-row">
+                        <li class="cs-menu-item">
+                            <h3 class="cs-h3">
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
+                            </h3>
+                            <p class="cs-menu-p">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                        </li>
+                        <li class="cs-menu-item">
+                            <h3 class="cs-h3">
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
+                            </h3>
+                            <p class="cs-menu-p">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                        </li>
+                    </div>
+                </ul>
+            </div>
+        </section>
+    </div>
+    <!--Desserts-->
+    <div id="cs-menu4-1018" class="cs-menu-group" data-category="four">
+        <!--Desserts Section 1-->
+        <section class="cs-menu">
+            <div class="cs-container">
+                <div class="cs-content">
+                    <h2 class="cs-title">Desserts</h2>
+                    <p class="cs-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+                    </p>
+                </div>
+                <div class="cs-menu-list">
+                    <!--If you want a row of three, add cs-3 class to the row and it will format to the a 3 item menu row-->
+                    <div class="cs-menu-row cs-3">
+                        <div class="cs-menu-item">
+                            <h3 class="cs-h3">
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
+                            </h3>
+                            <p class="cs-menu-p">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                        </div>
+                        <div class="cs-menu-item">
+                            <h3 class="cs-h3">
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
+                            </h3>
+                            <p class="cs-menu-p">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                        </div>
+                        <div class="cs-menu-item">
+                            <h3 class="cs-h3">
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
+                            </h3>
+                            <p class="cs-menu-p">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="cs-menu-row">
+                        <div class="cs-menu-item">
+                            <h3 class="cs-h3">
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
+                            </h3>
+                            <p class="cs-menu-p">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                        </div>
+                        <div class="cs-menu-item">
+                            <h3 class="cs-h3">
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
+                            </h3>
+                            <p class="cs-menu-p">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="cs-menu-row">
+                        <div class="cs-menu-item">
+                            <h3 class="cs-h3">
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
+                            </h3>
+                            <p class="cs-menu-p">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                        </div>
+                        <div class="cs-menu-item">
+                            <h3 class="cs-h3">
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
+                            </h3>
+                            <p class="cs-menu-p">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="cs-menu-row">
+                        <div class="cs-menu-item">
+                            <h3 class="cs-h3">
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
+                            </h3>
+                            <p class="cs-menu-p">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                        </div>
+                        <div class="cs-menu-item">
+                            <h3 class="cs-h3">
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
+                            </h3>
+                            <p class="cs-menu-p">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="cs-menu-row">
+                        <div class="cs-menu-item">
+                            <h3 class="cs-h3">
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
+                            </h3>
+                            <p class="cs-menu-p">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                        </div>
+                        <div class="cs-menu-item">
+                            <h3 class="cs-h3">
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
+                            </h3>
+                            <p class="cs-menu-p">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                        </div>
+                    </div>
+                    </ul>
+                </div>
+        </section>
+        <!--Desserts Section 2-->
+        <section class="cs-menu cs-menu-style2">
+            <div class="cs-container">
+                <div class="cs-content">
+                    <h2 class="cs-title">Desserts Section 2</h2>
+                    <p class="cs-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+                    </p>
+                </div>
+                <ul class="cs-menu-list">
+                    <div class="cs-menu-row">
+                        <li class="cs-menu-item">
+                            <h3 class="cs-h3">
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
+                            </h3>
+                            <p class="cs-menu-p">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                        </li>
+                        <li class="cs-menu-item">
+                            <h3 class="cs-h3">
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
+                            </h3>
+                            <p class="cs-menu-p">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                        </li>
+                    </div>
+                    <div class="cs-menu-row">
+                        <li class="cs-menu-item">
+                            <h3 class="cs-h3">
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
+                            </h3>
+                            <p class="cs-menu-p">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                        </li>
+                        <li class="cs-menu-item">
+                            <h3 class="cs-h3">
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
+                            </h3>
+                            <p class="cs-menu-p">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                        </li>
+                    </div>
+                    <div class="cs-menu-row">
+                        <li class="cs-menu-item">
+                            <h3 class="cs-h3">
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
+                            </h3>
+                            <p class="cs-menu-p">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                        </li>
+                        <li class="cs-menu-item">
+                            <h3 class="cs-h3">
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
+                            </h3>
+                            <p class="cs-menu-p">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                        </li>
+                    </div>
+                    <div class="cs-menu-row">
+                        <li class="cs-menu-item">
+                            <h3 class="cs-h3">
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
+                            </h3>
+                            <p class="cs-menu-p">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                        </li>
+                        <li class="cs-menu-item">
+                            <h3 class="cs-h3">
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
+                            </h3>
+                            <p class="cs-menu-p">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                        </li>
+                    </div>
+                    <div class="cs-menu-row">
+                        <li class="cs-menu-item">
+                            <h3 class="cs-h3">
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
+                            </h3>
+                            <p class="cs-menu-p">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                        </li>
+                        <li class="cs-menu-item">
+                            <h3 class="cs-h3">
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
+                            </h3>
+                            <p class="cs-menu-p">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                        </li>
+                    </div>
+                </ul>
+            </div>
+        </section>
+        <!--Desserts Section 3-->
+        <section class="cs-menu">
+            <div class="cs-container">
+                <div class="cs-content">
+                    <h2 class="cs-title">Desserts Section 3</h2>
+                    <p class="cs-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+                    </p>
+                </div>
+                <ul class="cs-menu-list">
+                    <div class="cs-menu-row">
+                        <li class="cs-menu-item">
+                            <h3 class="cs-h3">
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
+                            </h3>
+                            <p class="cs-menu-p">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                        </li>
+                        <li class="cs-menu-item">
+                            <h3 class="cs-h3">
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
+                            </h3>
+                            <p class="cs-menu-p">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                        </li>
+                    </div>
+                    <div class="cs-menu-row">
+                        <li class="cs-menu-item">
+                            <h3 class="cs-h3">
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
+                            </h3>
+                            <p class="cs-menu-p">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                        </li>
+                        <li class="cs-menu-item">
+                            <h3 class="cs-h3">
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
+                            </h3>
+                            <p class="cs-menu-p">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                        </li>
+                    </div>
+                    <div class="cs-menu-row">
+                        <li class="cs-menu-item">
+                            <h3 class="cs-h3">
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
+                            </h3>
+                            <p class="cs-menu-p">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                        </li>
+                        <li class="cs-menu-item">
+                            <h3 class="cs-h3">
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
+                            </h3>
+                            <p class="cs-menu-p">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                        </li>
+                    </div>
+                    <div class="cs-menu-row">
+                        <li class="cs-menu-item">
+                            <h3 class="cs-h3">
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
+                            </h3>
+                            <p class="cs-menu-p">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                        </li>
+                        <li class="cs-menu-item">
+                            <h3 class="cs-h3">
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
+                            </h3>
+                            <p class="cs-menu-p">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                        </li>
+                    </div>
+                    <div class="cs-menu-row">
+                        <li class="cs-menu-item">
+                            <h3 class="cs-h3">
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
+                            </h3>
+                            <p class="cs-menu-p">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                        </li>
+                        <li class="cs-menu-item">
+                            <h3 class="cs-h3">
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
+                            </h3>
+                            <p class="cs-menu-p">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                        </li>
+                    </div>
+                </ul>
+            </div>
+        </section>
+    </div>
+    <!--Appetizers-->
+    <div id="cs-menu5-1018" class="cs-menu-group" data-category="five">
+        <!--Desserts Section 1-->
+        <section class="cs-menu">
+            <div class="cs-container">
+                <div class="cs-content">
+                    <h2 class="cs-title">Appetizers</h2>
+                    <p class="cs-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+                    </p>
+                </div>
+                <div class="cs-menu-list">
+                    <!--If you want a row of three, add cs-3 class to the row and it will format to the a 3 item menu row-->
+                    <div class="cs-menu-row cs-3">
+                        <div class="cs-menu-item">
+                            <h3 class="cs-h3">
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
+                            </h3>
+                            <p class="cs-menu-p">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                        </div>
+                        <div class="cs-menu-item">
+                            <h3 class="cs-h3">
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
+                            </h3>
+                            <p class="cs-menu-p">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                        </div>
+                        <div class="cs-menu-item">
+                            <h3 class="cs-h3">
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
+                            </h3>
+                            <p class="cs-menu-p">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="cs-menu-row">
+                        <div class="cs-menu-item">
+                            <h3 class="cs-h3">
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
+                            </h3>
+                            <p class="cs-menu-p">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                        </div>
+                        <div class="cs-menu-item">
+                            <h3 class="cs-h3">
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
+                            </h3>
+                            <p class="cs-menu-p">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="cs-menu-row">
+                        <div class="cs-menu-item">
+                            <h3 class="cs-h3">
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
+                            </h3>
+                            <p class="cs-menu-p">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                        </div>
+                        <div class="cs-menu-item">
+                            <h3 class="cs-h3">
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
+                            </h3>
+                            <p class="cs-menu-p">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="cs-menu-row">
+                        <div class="cs-menu-item">
+                            <h3 class="cs-h3">
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
+                            </h3>
+                            <p class="cs-menu-p">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                        </div>
+                        <div class="cs-menu-item">
+                            <h3 class="cs-h3">
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
+                            </h3>
+                            <p class="cs-menu-p">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="cs-menu-row">
+                        <div class="cs-menu-item">
+                            <h3 class="cs-h3">
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
+                            </h3>
+                            <p class="cs-menu-p">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                        </div>
+                        <div class="cs-menu-item">
+                            <h3 class="cs-h3">
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
+                            </h3>
+                            <p class="cs-menu-p">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                        </div>
+                    </div>
+                    </ul>
+                </div>
+        </section>
+        <!--Desserts Section 2-->
+        <section class="cs-menu cs-menu-style2">
+            <div class="cs-container">
+                <div class="cs-content">
+                    <h2 class="cs-title">Appetizers Section 2</h2>
+                    <p class="cs-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+                    </p>
+                </div>
+                <ul class="cs-menu-list">
+                    <div class="cs-menu-row">
+                        <li class="cs-menu-item">
+                            <h3 class="cs-h3">
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
+                            </h3>
+                            <p class="cs-menu-p">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                        </li>
+                        <li class="cs-menu-item">
+                            <h3 class="cs-h3">
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
+                            </h3>
+                            <p class="cs-menu-p">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                        </li>
+                    </div>
+                    <div class="cs-menu-row">
+                        <li class="cs-menu-item">
+                            <h3 class="cs-h3">
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
+                            </h3>
+                            <p class="cs-menu-p">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                        </li>
+                        <li class="cs-menu-item">
+                            <h3 class="cs-h3">
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
+                            </h3>
+                            <p class="cs-menu-p">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                        </li>
+                    </div>
+                    <div class="cs-menu-row">
+                        <li class="cs-menu-item">
+                            <h3 class="cs-h3">
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
+                            </h3>
+                            <p class="cs-menu-p">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                        </li>
+                        <li class="cs-menu-item">
+                            <h3 class="cs-h3">
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
+                            </h3>
+                            <p class="cs-menu-p">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                        </li>
+                    </div>
+                    <div class="cs-menu-row">
+                        <li class="cs-menu-item">
+                            <h3 class="cs-h3">
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
+                            </h3>
+                            <p class="cs-menu-p">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                        </li>
+                        <li class="cs-menu-item">
+                            <h3 class="cs-h3">
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
+                            </h3>
+                            <p class="cs-menu-p">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                        </li>
+                    </div>
+                    <div class="cs-menu-row">
+                        <li class="cs-menu-item">
+                            <h3 class="cs-h3">
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
+                            </h3>
+                            <p class="cs-menu-p">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                        </li>
+                        <li class="cs-menu-item">
+                            <h3 class="cs-h3">
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
+                            </h3>
+                            <p class="cs-menu-p">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                        </li>
+                    </div>
+                </ul>
+            </div>
+        </section>
+        <!--Desserts Section 3-->
+        <section class="cs-menu">
+            <div class="cs-container">
+                <div class="cs-content">
+                    <h2 class="cs-title">Appetizers Section 3</h2>
+                    <p class="cs-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+                    </p>
+                </div>
+                <ul class="cs-menu-list">
+                    <div class="cs-menu-row">
+                        <li class="cs-menu-item">
+                            <h3 class="cs-h3">
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
+                            </h3>
+                            <p class="cs-menu-p">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                        </li>
+                        <li class="cs-menu-item">
+                            <h3 class="cs-h3">
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
+                            </h3>
+                            <p class="cs-menu-p">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                        </li>
+                    </div>
+                    <div class="cs-menu-row">
+                        <li class="cs-menu-item">
+                            <h3 class="cs-h3">
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
+                            </h3>
+                            <p class="cs-menu-p">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                        </li>
+                        <li class="cs-menu-item">
+                            <h3 class="cs-h3">
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
+                            </h3>
+                            <p class="cs-menu-p">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                        </li>
+                    </div>
+                    <div class="cs-menu-row">
+                        <li class="cs-menu-item">
+                            <h3 class="cs-h3">
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
+                            </h3>
+                            <p class="cs-menu-p">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                        </li>
+                        <li class="cs-menu-item">
+                            <h3 class="cs-h3">
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
+                            </h3>
+                            <p class="cs-menu-p">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                        </li>
+                    </div>
+                    <div class="cs-menu-row">
+                        <li class="cs-menu-item">
+                            <h3 class="cs-h3">
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
+                            </h3>
+                            <p class="cs-menu-p">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                        </li>
+                        <li class="cs-menu-item">
+                            <h3 class="cs-h3">
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
+                            </h3>
+                            <p class="cs-menu-p">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                        </li>
+                    </div>
+                    <div class="cs-menu-row">
+                        <li class="cs-menu-item">
+                            <h3 class="cs-h3">
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
+                            </h3>
+                            <p class="cs-menu-p">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                        </li>
+                        <li class="cs-menu-item">
+                            <h3 class="cs-h3">
+                                <span class="cs-name">Purple Corn Tostada</span>
+                                <span class="cs-price">$56</span>
+                            </h3>
+                            <p class="cs-menu-p">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                            </p>
+                        </li>
                     </div>
                 </ul>
             </div>
         </section>
     </div>
 </div>
-
-{% include 'components/cta.html' %}
-
 {% endblock %}

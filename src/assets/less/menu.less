@@ -4,7 +4,7 @@
 
 /* Mobile - 360px */
 @media only screen and (min-width: 0em) {
-  #banner-1031 {
+  #banner-1018 {
     padding: 0 (16/16rem);
     /* 160px - 245px */
     padding-top: clamp(10rem, 25vw, 15.3125rem);
@@ -139,9 +139,13 @@
     overflow: initial;
   }
 
-  #cs-menu-group-1031 {
+  #cs-menu-group-1018 {
     text-align: center;
     height: auto;
+    padding: var(--sectionPadding);
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 0;
 
     .cs-container {
       width: 100%;
@@ -373,10 +377,9 @@
       /* 16px - 25px */
       font-size: clamp(1rem, 2vw, 1.5625rem);
       line-height: 1.2em;
-      margin: 0;
-      max-width: 18ch;
+      max-width: 16ch;
       margin-right: auto;
-      color: var(--bodyTextColor);
+      color: var(--headerColor);
       display: block;
       /* prevents flexbox from squishing it */
       flex: none;
@@ -417,7 +420,7 @@
 
 /* Tablet - 768px */
 @media only screen and (min-width: 48rem) {
-  #cs-menu-group-1031 {
+  #cs-menu-group-1018 {
     .cs-container {
       max-width: (1280/16rem);
     }
@@ -468,7 +471,7 @@
 /* Dark Mode */
 @media only screen and (min-width: 0rem) {
   body.dark-mode {
-    #cs-menu-group-1031 {
+    #cs-menu-group-1018 {
       background-color: rgba(0, 0, 0, 0.5);
 
       .cs-button-group {
@@ -506,3 +509,4 @@
     }
   }
 }
+                                

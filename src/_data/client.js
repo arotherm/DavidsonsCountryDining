@@ -1,6 +1,6 @@
 module.exports = {
     "name": "Davidson's Country Dining",
-    "email": "help@codestitch.app",
+    "email": "Dan@DavidsonsCountryDining.com",
     "phoneForTel": "705-436-1476",
     "phoneFormatted": "(705) 436-1476",
     "address": {

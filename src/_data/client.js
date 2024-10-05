@@ -4,7 +4,7 @@ module.exports = {
     "phoneForTel": "705-436-1476",
     "phoneFormatted": "(705) 436-1476",
     "address": {
-        "lineOne": "73 Big Bay Point Rd",
+"lineOne": "73 Big Bay Point Rd",
         "lineTwo": "",
         "city": "Innisfil",
         "state": "ON",

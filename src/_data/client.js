@@ -1,21 +1,20 @@
 module.exports = {
-    "name": "Code Stitch Web Designs",
-    "email": "help@codestitch.app",
-    "phoneForTel": "555-779-4407",
-    "phoneFormatted": "(555) 779-4407",
+    "name": "Davidson's Country Dining",
+    "email": "Dan@DavidsonsCountryDining.com",
+    "phoneForTel": "705-436-1476",
+    "phoneFormatted": "(705) 436-1476",
     "address": {
-        "lineOne": "First Address Line",
-        "lineTwo": "Second Address Line",
-        "city": "Denver",
-        "state": "CO",
-        "zip": "80206",
-        "country": "US",
-        "mapLink": "https://maps.app.goo.gl/TEdS5KoLC9ZcULuQ6"
+"lineOne": "73 Big Bay Point Rd",
+        "lineTwo": "",
+        "city": "Innisfil",
+        "state": "ON",
+        "zip": "L9S 2N1",
+        "mapLink": "https://maps.app.goo.gl/67eYzqEVaMYRy6x8A"
     },
     "socials": {
-        "facebook": "https://www.facebook.com/",
-        "instagram": "https://www.instagram.com/",
+        "facebook": "https://www.facebook.com/Davidsonscountrydining",
+        "instagram": "https://www.instagram.com/Davidsonscountrydining",
     },
     //! Make sure you include the file protocol (e.g. https://) and that NO TRAILING SLASH is included
-    "domain": "https://www.example.com"
+    "domain": "https://www.davidsonscountrydining.com"
 };

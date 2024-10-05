@@ -6,16 +6,6 @@
 
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
-    :root {
-        /* 13px - 16px */
-        --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
-        /* 31px - 49px */
-        --headerFontSize: clamp(1.9375rem, 4.5vw, 3.0625rem);
-        --bodyFontSize: 1rem;
-
-        /* 60px - 100px top and bottom */
-        --sectionPadding: clamp(3.75em, 7.82vw, 6.25em) 1rem;
-    }
 
     #cs-contact {
         padding: var(--sectionPadding);
@@ -95,10 +85,47 @@
                 padding-top: (20/16rem);
                 font-family: inherit;
             }
-
             .cs-button-solid {
-                border: none;
-                width: 100%;
+                z-index: 1;
+                position: relative;
+                display: inline-block;
+                background-color: var(--primary);
+                width: auto;
+                padding: 0 (30/16rem);
+                text-decoration: none;
+                text-transform: uppercase;
+                font-size: (16/16rem);
+                line-height: (50/16em);
+                font-weight: bold;
+
+                // Transition Properties
+                color: #fff;  // Change this to white
+                transition: color 0.3s;
+                transition-delay: 0.1s;
+                text-align: center;
+
+                &:hover {
+                    color: #fff;  // Ensure hover color is also white
+                    &:before {
+                        width: 100%;
+                    }
+                }
+
+                &:before {
+                    z-index: -1;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    content: "";
+                    opacity: 1;
+                    display: block;
+                    background-color: #000;
+                    height: 100%;
+
+                    // Transition properties
+                    width: 0;
+                    transition: width 0.3s;
+                }
             }
         }
 

@@ -1,6 +1,6 @@
 ---
-title: 'Pixel Perfect Websites | Code Stitch Web Designs | Denver, CO'
-description: 'Meta description for the page'
+title: "Davidson's Restaurant | Davidson's Country Dining | Innisfil, ON"
+description: 'Local Restaurant in Innisfil'
 preloadImg: '/assets/images/landing.jpg'
 permalink: '/'
 tags: 'sitemap' # Sitemap will use all pages in content/, due to content.json. As index.html is not included in content/ we need to manually add the sitemap tag to this page (only).
@@ -14,7 +14,7 @@ eleventyNavigation:
 {% block head %}
     <link rel="stylesheet" href="/assets/css/local.css"/>
     <link rel="stylesheet" href="/assets/css/critical.css"/>
-
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
     <!-- Script for Netlify Identity -->
     <script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     <script defer>
@@ -73,316 +73,458 @@ eleventyNavigation:
 {% endblock %}
 
 {% block body %}
-
     <!-- ============================================ -->
     <!--                    Hero                      -->
     <!-- ============================================ -->
 
-    <section id="hero">
+    <section id="hero-998">
         <div class="cs-container">
-            <div class="cs-flex-group">
-                <span class="cs-topper">mountain hiking society</span>
-                <h1 class="cs-title">Explore the World with Exciting People</h1>
+            <div class="cs-content">
+                <span class="cs-topper">Welcome to</span>
+                <!--Logo-->
+                <picture class="cs-logo">
+                    <source media="(max-width: 600px)" srcset="assets/images/LogoT.png">
+                    <source media="(min-width: 601px)"  srcset="assets/images/LogoT.png">
+                    <img decoding="async" src="assets/images/LogoT.svg" alt="Davidson's Country Dining">
+                </picture>
                 <p class="cs-text">
-                    Tincidunt lobortis feugiat vivamus at augue eget arcu dictum varius. Nibh tortor id aliquet lectus proin nibh condimentum.
+                    Wed-Thu: 4:30-8:30 PM | Fri-Sun: 4:00-9:00 PM | Closed Mon-Tue<BR><BR><BR>
+                    Experience the perfect blend of culinary excellence, community spirit, and environmental stewardship. Dan Davidson’s restaurant offers great dishes crafted with love, served in a warm, rustic setting that feels like home. Enjoy a dining experience where every meal has taste and tradition.
                 </p>
-                <a href="/about" class="cs-button-solid">Explore More</a>
-                <a href="/contact" class="cs-button-transparent">
-                    <img
-                    class="cs-img"
-                    loading="lazy"
-                    decoding="async"
-                    src="https://csimg.nyc3.digitaloceanspaces.com/Hero/play.svg"
-                    alt="play icon"
-                    width="17"
-                    height="17"/>
-                    Get in Touch
-                </a>
+                <a href="tel:{{client.phoneForTel}}" class="cs-button-solid">Reserve Your Table</a>
             </div>
         </div>
-
-        <!-- Background Image -->
-        <picture class="cs-picture">
-            <source media="(max-width: 600px)" srcset="/assets/images/landing-m.webp">
-            <source media="(min-width: 601px)" srcset="/assets/images/landing.jpg">
-            <img aria-hidden="true" decoding="async" src="/assets/images/landing.jpg" alt="new home" width="2500" height="1667" loading="eager">
+        <!--Background Image-->
+        <!--Image is also set as background image in CSS at 1400px for parallax effect-->
+        <picture class="cs-background">
+            <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Hero/table-m.jpg">
+            <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Hero/table.jpg">
+            <img decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Hero/table.jpg" alt="logo" width="1920" height="1000">
         </picture>
     </section>
-
     <!-- ============================================ -->
-    <!--                  Services                    -->
+    <!--                    Menu                      -->
     <!-- ============================================ -->
 
-    <section id="services" class="services">
-        <!-- Get Icons From flaticon.com -->
-        <div class="card">
-            <picture>
-                <img
-                aria-hidden="true"
-                decoding="async"
-                src="/assets/svgs/service1.svg"
-                alt="appliance"
-                width="48"
-                height="48"/>
-            </picture>
-            <h2>Service 1</h2>
-            <p>Talk about the service with keywords people will be searching for it by. Keep it 1-2 sentences.</p>
+    <section id="menu-1001">
+        <div class="cs-container">
+            <div class="cs-content">
+                <picture class="cs-wrapper" aria-hidden="true">
+                    <img class="cs-decal" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Food-Menu/decal1.svg" decoding="async" alt="decal" width="181" height="36">
+                </picture>
+                <h2 class="cs-title">Our Specials</h2>
+                <p class="cs-text">
+                    Ask your server about our specials.
+                    At Dan Davidson's, we take pride in our thoughtfully curated menu, where each ingredient is chosen for its freshness and quality. No matter what you choose, each dish at Davidson's promises a delightful and satisfying culinary experience.
+                </p>
+            </div>
+            <ul class="cs-card-group">
+                <li class="cs-item">
+                    <!--                <picture class="cs-picture"  aria-hidden="true">-->
+                    <!--                    <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Food-Menu/food3.jpg">-->
+                    <!--                    <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Food-Menu/food3.jpg">-->
+                    <!--                    <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Food-Menu/food3.jpg" alt="food" width="160" height="160">-->
+                    <!--                </picture>-->
+                    <div class="cs-info">
+                        <h3 class="cs-h3">
+                            <span class="cs-name">Soup of the Day</span>
+                            <span class="cs-price">
+                                8
+                            </span>
+                        </h3>
+                        <p class="cs-item-p">
+                            House-made made fresh soup, done differently depending on the week or month. Ask us what it is when you come!
+                        </p>
+
+                    </div>
+                </li>
+                <li class="cs-item">
+    <!--                <picture class="cs-picture"  aria-hidden="true">-->
+    <!--                    <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Food-Menu/food3.jpg">-->
+    <!--                    <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Food-Menu/food3.jpg">-->
+    <!--                    <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Food-Menu/food3.jpg" alt="food" width="160" height="160">-->
+    <!--                </picture>-->
+                    <div class="cs-info">
+                        <h3 class="cs-h3">
+                            <span class="cs-name">Caeser</span>
+                            <span class="cs-price">
+                                11
+                            </span>
+                        </h3>
+                        <p class="cs-item-p">
+                            House-made Greek vinaigrette over romaine, tomato, cucumber, peppers, red onion, feta, and black olives.
+                        </p>
+                    </div>
+                </li>
+                <li class="cs-item">
+    <!--                <picture class="cs-picture"  aria-hidden="true">-->
+    <!--                    <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Food-Menu/food2.jpg">-->
+    <!--                    <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Food-Menu/food2.jpg">-->
+    <!--                    <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Food-Menu/food2.jpg" alt="food" width="160" height="160">-->
+    <!--                </picture>-->
+                    <div class="cs-info">
+                        <h3 class="cs-h3">
+                            <span class="cs-name">Escargot</span>
+                            <span class="cs-price">
+                                16
+                            </span>
+                        </h3>
+                        <p class="cs-item-p">
+                            Sautéed with fresh garlic, Pernod, and butter, topped with freshly grated mozzarella cheese, parsley and broiled to a golden brown perfection.
+                        </p>
+                    </div>
+                </li>
+
+                <li class="cs-item">
+    <!--                <picture class="cs-picture"  aria-hidden="true">-->
+    <!--                    <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Food-Menu/food2.jpg">-->
+    <!--                    <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Food-Menu/food2.jpg">-->
+    <!--                    <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Food-Menu/food2.jpg" alt="food" width="160" height="160">-->
+    <!--                </picture>-->
+                    <div class="cs-info">
+                        <h3 class="cs-h3">
+                            <span class="cs-name">Roasted Prime Rib Dinner</span>
+                            <span class="cs-price">
+                                40
+                            </span>
+                        </h3>
+                        <p class="cs-item-p">
+                            Our famous slow and low-roasted prime rib is served with seasonal vegetables topped with our country gravy and your choice of potato.
+                        </p>
+                    </div>
+                </li>
+            </ul>
+            <a href="menu/" class="cs-button-solid">See Our Menu</a>
         </div>
-        <div class="card">
-            <picture>
-                <img
-                aria-hidden="true"
-                decoding="async"
-                src="/assets/svgs/service2.svg"
-                alt="appliance"
-                width="48"
-                height="48"/>
-            </picture>
-            <h2>Service 2</h2>
-            <p>Talk about the service with keywords people will be searching for it by. Keep it 1-2 sentences.</p>
-        </div>
-        <div class="card">
-            <picture>
-                <img
-                aria-hidden="true"
-                decoding="async"
-                src="/assets/svgs/service3.svg"
-                alt="appliance"
-                width="48"
-                height="48"/>
-            </picture>
-            <h2>Service 3</h2>
-            <p>Talk about the service with keywords people will be searching for it by. Keep it 1-2 sentences.</p>
-        </div>
+        <!--Static background is in CSS as a tiled pattern-->
     </section>
 
     <!-- ============================================ -->
     <!--                 Side By Side                 -->
     <!-- ============================================ -->
 
-    <section id="sbs">
+    <section id="sbs-1456">
         <div class="cs-container">
             <!-- Left Image Section -->
-            <div class="cs-left">
+            <div class="cs-image-group">
                 <picture class="cs-picture cs-picture1">
-                    <source media="(max-width: 600px)" srcset="/assets/images/cabinets2-m.jpg">
-                    <source media="(min-width: 601px)" srcset="/assets/images/cabinets2.jpg">
-                    <img aria-hidden="true" decoding="async" src="/assets/images/cabinets2.jpg" alt="cabinets" loading="lazy" width="400" height="563">
+                    <source media="(max-width: 600px)" srcset="assets/images/Building/building1.jpeg">
+                    <source media="(min-width: 601px)" srcset="assets/images/Building/building1.jpeg">
+                    <img loading="lazy" decoding="async" src="assets/images/Building/building1.jpeg" alt="turbine" width="500" height="729" aria-hidden="true">
                 </picture>
                 <picture class="cs-picture cs-picture2">
-                    <source media="(max-width: 600px)" srcset="/assets/images/construction-m.jpg">
-                    <source media="(min-width: 601px)" srcset="/assets/images/construction.jpg">
-                    <img aria-hidden="true" decoding="async" src="/assets/images/construction.jpg" alt="house" loading="lazy" width="400" height="563">
+                    <source media="(max-width: 600px)" srcset="assets/images/Building/building2.jpeg">
+                    <source media="(min-width: 601px)" srcset="assets/images/Building/building2.jpeg">
+                    <img loading="lazy" decoding="async" src="assets/images/Building/building2.jpeg" alt="windmill" width="378" height="460" aria-hidden="true">
                 </picture>
             </div>
             <!-- Right Content Section-->
-            <div class="cs-right">
-                <span class="cs-topper">About Us</span>
-                <h2 class="cs-title">About Company Title</h2>
+            <div class="cs-content">
+                <span class="cs-topper">A Memorable Dining Experience</span>
+                <h2 class="cs-title">Innisfil’s Hidden Gem</h2>
                 <p class="cs-text">
-                    In consequat tincidunt turpis sit amet imperdiet. Praesent Class officelan nonatoureanor mauris laoreet, iaculis libero quis. Curabitur et tempus eri consequat tincidunt turpis sit amet imperdiet. Praesent nonatourean olei aptent taciti sociosqu ad litora torquent per.
+                    At Davidson's, we are dedicated to crafting memorable dining experiences with our thoughtfully curated menu. Each dish is made with the freshest local ingredients, blending tradition with creative flair. Whether you’re enjoying a cozy meal in our rustic setting or indulging in our gourmet specials, every bite promises satisfaction and delight.
                 </p>
+                <ul class="cs-card-group">
+                    <li class="cs-li">
+                        <picture class="cs-li-picture">
+                            <img class="cs-li-icon" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/volunteer1.svg" decoding="async" alt="icon" width="32" height="32" loading="lazy">
+                        </picture>
+                        <div class="cs-flex">
+                            <h3 class="cs-h3">Fresh, Local, and made with Love!</h3>
+                            <p class="cs-li-text">
+                                Our menu is thoughtfully curated to bring you the freshest local ingredients, blending tradition with creative flair.
+                            </p>
+                        </div>
+                    </li>
+                    <li class="cs-li">
+                        <picture class="cs-li-picture">
+                            <img class="cs-li-icon" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/volunteer2.svg" decoding="async" alt="icon" width="32" height="32" loading="lazy">
+                        </picture>
+                        <div class="cs-flex">
+                            <h3 class="cs-h3">Gourmet Ingredients</h3>
+                            <p class="cs-li-text">
+                                We pick only the best ingredients for our menu. From juicy prime rib to flavorful herbs, each part of our dishes is chosen carefully. This means every meal looks great and tastes even better.
+                            </p>
+                        </div>
+                    </li>
+                    <li class="cs-li">
+                        <picture class="cs-li-picture">
+                            <img class="cs-li-icon" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/volunteer3.svg" decoding="async" alt="icon" width="32" height="32" loading="lazy">
+                        </picture>
+                        <div class="cs-flex">
+                            <h3 class="cs-h3">Good Wine, Good Company</h3>
+                            <p class="cs-li-text">
+                                A good meal is best enjoyed with a nice glass of wine and friends. At Dan Davidson’s, we offer a selection of fine wines to match our dishes. Our cozy setting is perfect for making memories with loved ones.
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+                <a href="tel:{{client.phoneForTel}}" class="cs-button-solid">Call to Inquire</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!--                  Gallery                     -->
+    <!-- ============================================ -->
+
+    <section id="gallery-1234">
+        <div class="cs-container">
+            <div class="cs-content">
+                <span class="cs-topper">Our Gallery</span>
+                <h2 class="cs-title">See Our Homemade Cooking</h2>
                 <p class="cs-text">
-                    In consequat tincidunt turpis sit amet imperdiet. Praesent Class officelan nonatoureanor mauris laoreet, iaculis libero quis. Curabitur et tempus eri consequat tincidunt turpis sit amet imperdiet. Praesent nonatourean olei aptent taciti sociosqu ad litora torquent per.
+                    For over forty years, we’ve been making delicious meals with fresh ingredients. Each dish is made with care, just like at home. Check out our gallery to see the food we make every day, from scratch and with love.
+                </p>
+            </div>
+            <div class="cs-gallery">
+                <div class="cs-flex">
+                    <picture class="cs-picture cs-picture1">
+                        <!--Mobile Image-->
+                        <source media="(max-width: 600px)" srcset="assets/images/gallery/gallery1.jpeg">
+                        <!--Tablet and above Image-->
+                        <source media="(min-width: 601px)" srcset="assets/images/gallery/gallery1.jpeg">
+                        <img loading="lazy" decoding="async" src="assets/images/gallery/gallery1.jpeg" alt="person" width="360" height="420">
+                    </picture>
+                    <picture class="cs-picture cs-picture2">
+                        <!--Mobile Image-->
+                        <source media="(max-width: 600px)" srcset="assets/images/gallery/gallery2.jpeg">
+                        <!--Tablet and above Image-->
+                        <source media="(min-width: 601px)" srcset="assets/images/gallery/gallery2.jpeg">
+                        <img loading="lazy" decoding="async" src="assets/images/gallery/gallery2.jpeg" alt="person" width="360" height="240">
+                    </picture>
+                </div>
+                <picture class="cs-picture cs-row">
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)" srcset="assets/images/gallery/gallery3.jpeg">
+                    <!--Tablet and above Image-->
+                    <source media="(min-width: 601px)" srcset="assets/images/gallery/gallery3.jpeg">
+                    <img loading="lazy" decoding="async" src="assets/images/gallery/gallery3.jpeg" alt="person" width="360" height="520">
+                </picture>
+                <div class="cs-flex">
+                    <picture class="cs-picture cs-picture1">
+                        <!--Mobile Image-->
+                        <source media="(max-width: 600px)" srcset="assets/images/gallery/gallery4.jpeg">
+                        <!--Tablet and above Image-->
+                        <source media="(min-width: 601px)" srcset="assets/images/gallery/gallery4.jpeg">
+                        <img loading="lazy" decoding="async" src="assets/images/gallery/gallery4.jpeg" alt="person" width="360" height="420">
+                    </picture>
+                    <picture class="cs-picture cs-picture2">
+                        <!--Mobile Image-->
+                        <source media="(max-width: 600px)" srcset="assets/images/gallery/gallery5.jpeg">
+                        <!--Tablet and above Image-->
+                        <source media="(min-width: 601px)" srcset="assets/images/gallery/gallery5.jpeg">
+                        <img loading="lazy" decoding="async" src="assets/images/gallery/gallery5.jpeg" alt="person" width="360" height="240">
+                    </picture>
+                </div>
+                <picture class="cs-picture cs-row">
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)" srcset="assets/images/gallery/gallery6.jpeg">
+                    <!--Tablet and above Image-->
+                    <source media="(min-width: 601px)" srcset="assets/images/gallery/gallery6.jpeg">
+                    <img loading="lazy" decoding="async" src="assets/images/gallery/gallery6.jpeg" alt="person" width="360" height="520">
+                </picture>
+                <div class="cs-flex">
+                    <picture class="cs-picture cs-picture1">
+                        <!--Mobile Image-->
+                        <source media="(max-width: 600px)" srcset="assets/images/gallery/gallery7.jpeg">
+                        <!--Tablet and above Image-->
+                        <source media="(min-width: 601px)" srcset="assets/images/gallery/gallery7.jpeg">
+                        <img loading="lazy" decoding="async" src="assets/images/gallery/gallery7.jpeg" alt="person" width="360" height="420">
+                    </picture>
+                    <picture class="cs-picture cs-picture2">
+                        <!--Mobile Image-->
+                        <source media="(max-width: 600px)" srcset="assets/images/gallery/gallery8.jpeg">
+                        <!--Tablet and above Image-->
+                        <source media="(min-width: 601px)" srcset="assets/images/gallery/gallery8.jpeg">
+                        <img loading="lazy" decoding="async" src="assets/images/gallery/gallery8.jpeg" alt="person" width="360" height="240">
+                    </picture>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!--                    Steps                     -->
+    <!-- ============================================ -->
+
+    <section id="steps-1893">
+        <div class="cs-container">
+            <div class="cs-image-group">
+                <picture class="cs-picture">
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)" srcset="assets/images/gallery/whyus.jpeg">
+                    <!--Tablet and above Image-->
+                    <source media="(min-width: 601px)" srcset="assets/images/gallery/whyus.jpeg">
+                    <img loading="lazy" decoding="async" src="assets/images/gallery/whyus.jpeg" alt="dermatologist" width="324" height="467">
+                </picture>
+                <img class="cs-graphic cs-brown" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/brown-lines2.svg" alt="graphic" width="100" height="98" aria-hidden="true">
+                <img class="cs-graphic cs-peach" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/peach-blob.svg" alt="graphic" width="42" height="31" aria-hidden="true">
+                <img class="cs-graphic cs-leaf" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/leaf-reverse.svg" alt="graphic" width="136" height="171" aria-hidden="true">
+                <img class="cs-graphic cs-dots" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/beige-dots.svg" alt="graphic" width="159" height="88" aria-hidden="true">
+                <img class="cs-graphic cs-lines" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/mesh-reverse.svg" alt="graphic" width="150" height="165" aria-hidden="true">
+            </div>
+            <div class="cs-wrapper">
+                <div class="cs-content">
+                    <span class="cs-topper">Why us?</span>
+                    <h2 class="cs-title">Come as a stranger,<BR> Leave as a Friend!</h2>
+                </div>
+                <ul class="cs-card-group">
+                    <li class="cs-item">
+                        <span class="cs-number">01</span>
+                        <div class="cs-flex">
+                            <h3 class="cs-h3">All Tastes Welcome!</h3>
+                            <p class="cs-item-text">
+                                Davidson’s Country Dining offers an extensive range of lunch and dinner dishes, catering to all tastes. Enjoy everything from hearty burgers and fresh salads to gourmet entrées and delicious sandwiches, each made with the finest ingredients.
+                            </p>
+                        </div>
+                    </li>
+                    <li class="cs-item">
+                        <span class="cs-number">02</span>
+                        <div class="cs-flex">
+                            <h3 class="cs-h3">Locally Sourced, Fresh Ingredients</h3>
+                            <p class="cs-item-text">
+                                We are dedicated to using fresh, high-quality ingredients, sourcing locally whenever possible. This commitment ensures that every dish not only tastes amazing but also supports local farmers and suppliers.
+                            </p>
+                        </div>
+                    </li>
+                    <li class="cs-item">
+                        <span class="cs-number">03</span>
+                        <div class="cs-flex">
+                            <h3 class="cs-h3">Friendly, welcoming Atmosphere</h3>
+                            <p class="cs-item-text">
+                                Our restaurant is designed to offer a warm and welcoming atmosphere. Whether you’re in for a relaxed lunch, a cozy dinner, or a special event, Davidson’s Country Dining provides a friendly environment where great food and good times come together.
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!--                Side By Side                  -->
+    <!-- ============================================ -->
+
+    <section id="sbs-1010">
+        <div class="cs-container">
+            <div class="cs-image-group">
+                <picture class="cs-picture">
+                    <!--Desktop-->
+                    <source media="(min-width: 1024px)" srcset="assets/images/gallery/Flowers.jpeg">
+                    <!--Tablet-->
+                    <source media="(min-width: 601px)" srcset="assets/images/gallery/Flowers.jpeg">
+                    <!--Mobile-->
+                    <source media="(max-width: 600px)" srcset="assets/images/gallery/Flowers.jpeg">
+                    <img loading="lazy" decoding="async" src="assets/images/gallery/Flowers.jpeg" alt="beef" width="522" height="461" aria-hidden="true">
+                </picture>
+                <img class="cs-seal" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/SideBySide/seal2.svg" alt="seal" width="190" height="182">
+            </div>
+            <div class="cs-content">
+                <span class="cs-topper">Our Story</span>
+                <h2 class="cs-title">Who We Are</h2>
+                <p class="cs-text">
+                    Located near Innisfil’s Friday Harbour Resort, Davidson’s Country Dining is a cozy log cabin restaurant owned by Dan Davidson since 1984. With its rustic charm and eclectic decor, our eatery offers a unique dining experience featuring a menu that ranges from hearty cottage fare to fine dining, all made from scratch.
+                    <span class="cs-spacer"></span>
+                    Discover why we’re a beloved gem in Innisfil, complete with a resident ghost named Earl who adds a touch of mystery and charm. From prime rib to homemade desserts, our diverse menu and welcoming ambiance ensure a memorable dining experience.
+                </p>
+                <a href="tel:(705)436-1476" class="cs-button-solid">Reserve Your Table</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!--                  Reviews                     -->
+    <!-- ============================================ -->
+
+    <section id="reviews-567">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Our Reviews</span>
+            <h2 class="cs-title">What our Friends say about Us!</h2>
+            <p class="cs-text">
+                Here is what the locals have to say about the place.
+            </p>
+        </div>
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <!--Blue Quote-->
+                <img class="cs-stars" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Reviews/stars3.svg" decoding="async" alt="quote icon" width="189" height="24">
+                <p class="cs-item-text">
+                   Just moved to Friday Harbour in Innisfil & dined at this charming restaurant & the food was absolutely delicious yum yum 😋 the Service was impeccable & the atmosphere was so cozzzyy & relaxing I feel like I could of just hung out at the bar & had the best night ever!!<br><br>
+
+                    You can definitely tell that the owners are extremely social & they take such pride in putting lots of Love into this charming place.<br><br>
+
+                    I would definitely recommend having a date night at this place!! Cheers 🥂<BR><BR>
+                    Food: 5/5  |  Service: 5/5  |  Atmosphere: 5/5
                 </p>
                 <div class="cs-flex-group">
-                    <p class="cs-flex-p">
-                        In consequat tincidunt turpis sit amet imperdiet. Praesent Classei consequat tincidunt turpis sit amet imperdiet for mind.
-                    </p>
-                    <span class="cs-name">Justin Time</span>
-                    <span class="cs-job">CEO-Founder</span>
-                    <img 
-                    class="cs-quote-icon"
-                    loading="lazy"
-                    decoding="async"
-                    src="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/quote-white.svg"
-                    alt="gavel"
-                    width="136"
-                    height="77"/>
-                </div>
-                <a href="/about" class="cs-button-solid">More About Us</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- ============================================ -->
-    <!--            Extra Content To Rank             -->
-    <!-- ============================================ -->
-
-    <section id="sbs-r">
-        <div class="cs-container">
-            <!-- Left Image Section -->
-            <div class="cs-left">
-                <picture class="cs-picture cs-picture1">
-                    <source media="(max-width: 600px)" srcset="/assets/images/construction-m.jpg">
-                    <source media="(min-width: 601px)" srcset="/assets/images/construction.jpg">
-                    <img aria-hidden="true" decoding="async" src="/assets/images/construction.jpg" alt="house" loading="lazy" width="400" height="560">
-                </picture>
-                <picture class="cs-picture cs-picture2">
-                    <source media="(max-width: 600px)" srcset="/assets/images/cabinets2-m.jpg">
-                    <source media="(min-width: 601px)" srcset="/assets/images/cabinets2.jpg">
-                    <img aria-hidden="true" decoding="async" src="/assets/images/cabinets2.jpg" alt="cabinets" loading="lazy" width="400" height="560">
-                </picture>
-            </div>
-            <!-- Right Content Section-->
-            <div class="cs-right">
-                <span class="cs-topper">SEO Ranking</span>
-                <h2 class="cs-title">Talk about a main service keyword</h2>
-                <p class="cs-text">
-                    In consequat tincidunt turpis sit amet imperdiet. Praesent Class officelan nonatoureanor mauris laoreet, iaculis libero quis. Curabitur et tempus eri consequat tincidunt turpis sit amet imperdiet. Praesent nonatourean olei aptent taciti sociosqu ad litora torquent per.
-                </p>
-                <p class="cs-text">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non tenetur, iure nihil ipsam qui atque commodi id voluptatem nesciunt, quis animi fuga cum doloribus! Eaque laboriosam, unde consectetur iure asperiores ullam. Consequuntur debitis a voluptatibus vitae optio autem explicabo quia neque est quas, in placeat. Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus modi laudantium voluptatibus rem libero error minus quia eligendi sapiente eos.
-                </p>
-                <a href="/blog" class="cs-button-solid">Read our Blog</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- ============================================ -->
-    <!--                   Gallery                    -->
-    <!-- ============================================ -->
-
-    <section id="gallery">
-        <div class="cs-container">
-            <span class="cs-topper">Our Portfolio</span>
-            <h2 class="cs-title">Et orci volutpat, back up generator installations</h2>
-            <div class="cs-image-group">
-                <!-- Row 1-->
-                <div class="cs-row cs-row-1">
-                    <!-- To add more images, copy and paste this row's picture tags here in order from cs-picture-1 to cs-picture-3 and they will maintain the same layout-->
-                    <picture class="cs-picture cs-picture1">
-                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port1-m.jpg">
-                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port1.jpg">
-                        <img aria-hidden="true" decoding="async" src="/assets/images/portfolio/port1.jpg" alt="new hallway" loading="lazy" width="400" height="560">
+                    <picture class="cs-picture">
+                        <img class="cs-profile" src="assets/images/reviews/review1.png" decoding="async" alt="profile" width="50" height="50" aria-hidden="true">
                     </picture>
-                    <picture class="cs-picture cs-picture2">
-                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port4-m.jpg">
-                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port4.jpg">
-                        <img aria-hidden="true" decoding="async" src="/assets/images/portfolio/port4.jpg" alt="new home construction" loading="lazy" width="400" height="560">
-                    </picture>
-                    <picture class="cs-picture cs-picture3">
-                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port7-m.jpg">
-                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port7.jpg">
-                        <img aria-hidden="true" decoding="async" src="/assets/images/portfolio/port7.jpg" alt="building a new wall" loading="lazy" width="400" height="560">
-                    </picture>
-                </div>
-                <!-- Row 2 -->
-                <div class="cs-row cs-row-2">
-                    <!-- To add more images, copy and paste this row's picture tags here in order from cs-picture-1 to cs-picture-3 and they will maintain the same layout-->
-                    <picture class="cs-picture cs-picture1">
-                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port2-m.jpg">
-                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port2.jpg">
-                        <img aria-hidden="true" decoding="async" src="/assets/images/portfolio/port2.jpg" alt="new kitchen" loading="lazy" width="400" height="560">
-                    </picture>
-                    <picture class="cs-picture cs-picture2">
-                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port5-m.jpg">
-                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port5.jpg">
-                        <img aria-hidden="true" decoding="async" src="/assets/images/portfolio/port5.jpg" alt="apartment addition" loading="lazy" width="400" height="560">
-                    </picture>
-                    <picture class="cs-picture cs-picture3">
-                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port8-m.jpg">
-                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port8.jpg">
-                        <img aria-hidden="true" decoding="async" src="/assets/images/portfolio/port8.jpg" alt="kew kitchen cabinets" loading="lazy" width="400" height="560">
-                    </picture>
-                </div>
-                <!-- Row 3 -->
-                <div class="cs-row cs-row-3">
-                    <!-- To add more images, copy and paste this row's picture tags here in order from cs-picture-1 to cs-picture-3 and they will maintain the same layout-->
-                    <picture class="cs-picture cs-picture1">
-                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port3-m.jpg">
-                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port3.jpg">
-                        <img aria-hidden="true" decoding="async" src="/assets/images/portfolio/port3.jpg" alt="new kitchen" loading="lazy" width="400" height="560">
-                    </picture>
-                    <picture class="cs-picture cs-picture2">
-                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port6-m.jpg">
-                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port6.jpg">
-                        <img aria-hidden="true" decoding="async" src="/assets/images/portfolio/port6.jpg" alt="apartment addition" loading="lazy" width="400" height="560">
-                    </picture>
-                    <picture class="cs-picture cs-picture3">
-                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port9-m.jpg">
-                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port9.jpg">
-                        <img aria-hidden="true" decoding="async" src="/assets/images/portfolio/port9.jpg" alt="kew kitchen cabinets" loading="lazy" width="400" height="560">
-                    </picture>
-
-                </div>
-            </div>
-            <a href="/projects" class="cs-button-solid">View Full Gallery</a>
-        </div>
-    </section>
-
-    <!-- ============================================ -->
-    <!--                   Reviews                    -->
-    <!-- ============================================ -->
-
-    <section id="reviews">
-        <div class="cs-container">
-            <span class="cs-topper">Our Reviews</span>
-            <h2 class="cs-title">Words From Our Customers</h2>
-            <p class="cs-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit dolor volutpat porttitor sagittis nunc nisl. Sagittis sit pellentesque gravida viverra. Leo ut sed euismod tortor risus et. Ornare non neque, leo, ornare. Lorem ipsum dolor sit amet.
-            </p>
-            <ul class="cs-card-group">
-                <!-- Review 1 -->
-                <li class="cs-item">
-                    <img
-                    class="cs-item-img"
-                    aria-hidden="true"
-                    loading="lazy"
-                    decoding="async"
-                    src="https://csimg.nyc3.digitaloceanspaces.com/Reviews/profile5.png"
-                    alt="profile picture"
-                    width="80"
-                    height="80"/>
-                    <p class="cs-item-p">
-                        Dictum dolor, nullam morbi sem in auctor proin. Consequat dolor habitasse nam sed tempor. Viverra magna pharetra rhoncus, nec sed ullamcorper lectus et. Auctor velit diam fermentum consequat. Feugiat viverra massa urna, volutpat orci imperdiet eget eget.
-                    </p>
-                    <span class="cs-reviewer">
-                        Jon Doe
-                        <span class="cs-desc">Homeowner</span>
+                    <span class="cs-name">
+                        Tammy Perger
+                        <span class="cs-job">New Customer</span>
                     </span>
-                    <img
-                    class="cs-item-stars"
-                    aria-hidden="true"
-                    loading="lazy"
-                    decoding="async"
-                    src="https://csimg.nyc3.digitaloceanspaces.com/Reviews/stars-yellow.svg"
-                    alt="stars"
-                    width="96"
-                    height="16"/>
-                </li>
-                <!-- Review 2 -->
-                <li class="cs-item">
-                    <img
-                    class="cs-item-img"
-                    aria-hidden="true"
-                    loading="lazy"
-                    decoding="async"
-                    src="https://csimg.nyc3.digitaloceanspaces.com/Reviews/profile-4.png"
-                    alt="profile picture"
-                    width="80"
-                    height="80"/>
-                    <p class="cs-item-p">
-                        Dictum dolor, nullam morbi sem in auctor proin. Consequat dolor habitasse nam sed tempor. Viverra magna pharetra rhoncus, nec sed ullamcorper lectus et. Auctor velit diam fermentum consequat. Feugiat viverra massa urna, volutpat orci imperdiet eget eget.
-                    </p>
-                    <span class="cs-reviewer">
-                        Jane Doe
-                        <span class="cs-desc">Homeowner</span>
+                </div>
+            </li>
+            <li class="cs-item">
+                <!--Blue Quote-->
+                <img class="cs-stars" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Reviews/stars3.svg" decoding="async" alt="quote icon" width="189" height="24">
+                <p class="cs-item-text">
+                    I'd have my family birthdays here. Great customer service. Friendly staff. Good food.<BR><BR>
+                    Food: 5/5  |  Service: 5/5  |  Atmosphere: 5/5<BR><BR>
+                    Recommended dishes<BR>
+                    10 Oz Prime Rib Medium Rare, Prime Beef Dinner<BR><BR>
+
+                    Parking space<BR>
+                    Plenty of parking<BR><BR>
+
+                    Parking options<BR>
+                    Free parking lot
+                </p>
+                <div class="cs-flex-group">
+                    <picture class="cs-picture">
+                        <img class="cs-profile" src="assets/images/reviews/review2.png" decoding="async" alt="profile" width="50" height="50" aria-hidden="true">
+                    </picture>
+                    <span class="cs-name">
+                        Kel MOORE
+                        <span class="cs-job">Local Guide</span>
                     </span>
-                    <img
-                    class="cs-item-stars"
-                    aria-hidden="true"
-                    loading="lazy"
-                    decoding="async"
-                    src="https://csimg.nyc3.digitaloceanspaces.com/Reviews/stars-yellow.svg"
-                    alt="stars"
-                    width="96"
-                    height="16"/>
-                </li>
-            </ul>
-            <a aria-label="read more reviews" href="/reviews" class="cs-button-solid">Our Reviews</a>
-        </div>
-    </section>
+                </div>
+            </li>
+            <li class="cs-item">
+                <!--Blue Quote-->
+                <img class="cs-stars" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Reviews/stars3.svg" decoding="async" alt="quote icon" width="189" height="24">
+                <p class="cs-item-text">
+                    Had an amazing time at this restaurant!
+                    Impeccably clean, cozy vibes, and the friendliest staff. The food? Mouthwatering!
+                    Definitely try the burger and fish and chips. I'll be back for sure! Five stars!
+                    Food: 5/5  |  Service: 5/5  |  Atmosphere: 5/5<BR><BR>
+
+                    Parking space<BR>
+                    Plenty of parking<BR><BR>
+
+                    Parking options<BR>
+                    Free parking lot
+                </p>
+                <div class="cs-flex-group">
+                    <picture class="cs-picture">
+                        <img class="cs-profile" src="assets/images/reviews/review3.png" decoding="async" alt="profile" width="50" height="50" aria-hidden="true">
+                    </picture>
+                    <span class="cs-name">
+                        Mehrad Shah
+                        <span class="cs-job">Local</span>
+                    </span>
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>
+
+
+
 
     {% include 'components/cta.html' %}
 {% endblock %}

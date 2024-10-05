@@ -1,0 +1,125 @@
+---
+title: "Menu | Davidson's Country Dining"
+description: 'Menu'
+preloadImg: '/assets/images/landing.jpg'
+permalink: 'catering/'
+eleventyNavigation:
+    key: Menu
+    order: 800
+---
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <link rel="stylesheet" href="/assets/css/catering.css">
+{% endblock %}
+
+{% block body %}
+<!--&lt;!&ndash; ============================================ &ndash;&gt;-->
+<!--&lt;!&ndash;                   Banner                     &ndash;&gt;-->
+<!--&lt;!&ndash; ============================================ &ndash;&gt;-->
+
+<!--<div id="banner-850">-->
+<!--    <div class="cs-container">-->
+<!--        <span class="cs-int-title">Interior Page</span>-->
+<!--    </div>-->
+<!--    &lt;!&ndash;Background Image&ndash;&gt;-->
+<!--    <picture class="cs-background" aria-hidden="true">-->
+<!--        &lt;!&ndash;Mobile Image&ndash;&gt;-->
+<!--        <source media="(max-width: 600px)" srcset="/assets/images/restaurant_front.jpeg">-->
+<!--        &lt;!&ndash;Tablet and above Image&ndash;&gt;-->
+<!--        <source media="(min-width: 601px)" srcset="/assets/images/restaurant_front.jpeg">-->
+<!--        <img loading="lazy" decoding="async" src="/assets/images/restaurant_front.jpeg" alt="yoga" width="1280" height="568">-->
+<!--    </picture>-->
+<!--    &lt;!&ndash;Change the svg path fill color to whatever color the section below is so you can match it and create the illusion it is all one piece&ndash;&gt;-->
+<!--    <svg class="cs-wave" width="1920" height="179" viewBox="0 0 1920 179" fill="none" xmlns="http://www.w3.org/2000/svg">-->
+<!--        <path fill-rule="evenodd" clip-rule="evenodd" d="M1920 179V91.3463C1835.33 91.3463 1715.47 76.615 1549.2 32.9521C1299.48 -32.3214 1132.77 12.1006 947.32 61.5167C810.762 97.9044 664.042 137 466.533 137C331.607 137 256.468 123.447 188.082 111.113C130.974 100.812 78.5746 91.3609 0 91.3609V179H1920Z" fill="white"/>-->
+<!--    </svg>-->
+<!--</div>-->
+
+
+<!-- ============================================ -->
+<!--                   Banner                     -->
+<!-- ============================================ -->
+
+<div id="banner-1031">
+    <div class="cs-container">
+        <picture class="cs-picture">
+            <img class="cs-icon" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Ffancy-divider.svg" alt="divider" width="181" height="36" aria-hidden="true">
+        </picture>
+        <span class="cs-int-title">Catering</span>
+        <p class="cs-text">
+            Please take a moment to check out our menu. Feel free to call to ask about anything.
+        </p>
+    </div>
+    <!--Background Image-->
+    <picture class="cs-background">
+        <source media="(max-width: 600px)" srcset="/assets/images/table-bg.jpg">
+        <source media="(min-width: 601px)" srcset="/assets/images/table-bg.jpg">
+        <img decoding="async" src="/assets/images/table-bg.jpg" alt="logo" width="1920" height="1000">
+    </picture>
+</div>
+
+
+<!-- ============================================ -->
+<!--                 Content Page                 -->
+<!-- ============================================ -->
+
+<!-- ============================================
+    This Stitch is used for content heavy interior pages
+    that have no design or layout.  Often times these are
+    content silos where you talk extensively about a topic
+    to educate your visitors and rank on Google for the
+    content.  These are great for pages that have a TON
+    of content.  Design isn't important here, it's all
+    about making the content accessible and easy to read.
+================================================= -->
+
+<section id="content-page-850">
+    <div class="cs-container">
+        <div class="cs-content">
+            <h1 class="cs-title">Enjoy one of your special <span class="cs-color">Events </span> with us at the restaurant!</h1>
+            <h2>Do you have a birthday, a baby shower, or a celebration coming up?</h2>
+            <h3>We would love to hear about it. Why not give us a <a href="tel:{{client.phoneForTell}}" class="cs-link"> call! </a></h3>
+            <h4>A timeless classic fit for any event.</h4>
+            <p>
+                Join hundreds of others that have chosen to have their event here at our log cabin. We've been here for 40+ years, so you can be assured we know how make sure your event is running smoothly so you can focus on what matters. Experience and people.
+            </p>
+            <p>
+                We've been hosting events and catering for over 40 years. Choose us for your venue and we can make arrangements for you. Why try changing something thats been tried and tested?
+            </p>
+            <h3>No event too big nor too small</h3>
+            <ol>
+                <li>From weddings, to baby showers, to celebrations. We do it all.</li>
+                <li>A timeless rustic decor with an amazing personality to make your event unique and memorable.</li>
+                <li>A custom, personable experience for your friends and guests. </li>
+            </ol>
+            <h4>Davidson's Country Dining would love to have you!</h4>
+            <ul>
+                <li>Our pride and pastime is seeing you happy.  </li>
+                <li>Our owner Dan, hosts events for his guests and friends constantly.</li>
+                <li>We're locals so give us a call and we can sort something out.</li>
+            </ul>
+        </div>
+        <div class="cs-image-group">
+            <!--Top Picture-->
+            <picture class="cs-picture">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset="/assets/images/catering/cateringLiveMusic2.jpeg">
+                <!--Tablet and above Image-->
+                <source media="(min-width: 601px)" srcset="/assets/images/catering/cateringLiveMusic2.jpeg">
+                <img decoding="async" src="/assets/images/catering/cateringLiveMusic2.jpeg" alt="person" width="542" height="520" aria-hidden="true">
+            </picture>
+            <!--Top Picture-->
+            <picture class="cs-picture">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset="/assets/images/catering/cateringBirthday.jpeg">
+                <!--Tablet and above Image-->
+                <source media="(min-width: 601px)" srcset="/assets/images/catering/cateringBirthday.jpeg">
+                <img decoding="async" src="/assets/images/catering/cateringBirthday.jpeg" alt="person" width="542" height="520" aria-hidden="true">
+            </picture>
+        </div>
+    </div>
+</section>
+
+{% include 'components/cta.html' %}
+{% endblock %}

@@ -22,27 +22,27 @@
             <div class="cs-ul-wrapper">
                 <ul id="cs-expanded" class="cs-ul" aria-expanded="false">
                     <li class="cs-li">
-                        <a href="/" class="cs-li-link cs-active">
+                        <a href="/" class="cs-li-link {{ 'cs-active' if '' == page.fileSlug }}">
                             Home
                         </a>
                     </li>
                     <li class="cs-li">
-                        <a href="/about/" class="cs-li-link">
+                        <a href="/about/" class="cs-li-link {{ 'cs-active' if 'about' == page.fileSlug }}">
                             About
                         </a>
                     </li>
                     <li class="cs-li">
-                        <a href="/menu/" class="cs-li-link">
+                        <a href="/menu/" class="cs-li-link {{ 'cs-active' if 'menu' == page.fileSlug }}">
                             Menu
                         </a>
                     </li>
                     <li class="cs-li">
-                        <a href="/catering/" class="cs-li-link">
+                        <a href="/catering/" class="cs-li-link {{ 'cs-active' if 'catering' == page.fileSlug }}">
                             Catering
                         </a>
                     </li>
                     <li class="cs-li">
-                        <a href="/contact/" class="cs-li-link">
+                        <a href="/contact/" class="cs-li-link {{ 'cs-active' if 'contact' == page.fileSlug }}">
                             Contact
                         </a>
                     </li>

@@ -62,14 +62,13 @@
   }
   #hero-998 .cs-logo {
     width: 100%;
-    max-width: 25rem;
+    max-width: 43.75rem;
     margin: 0 0 1.5rem 0;
     display: block;
   }
   #hero-998 .cs-logo img {
     width: 100%;
     height: auto;
-    max-height: 25rem;
   }
   #hero-998 .cs-text {
     /* 16px - 20px */
